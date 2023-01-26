@@ -163,12 +163,32 @@ sleep 0.5
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo ""
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/dns.sh;chmod +x dns.sh;./dns.sh
-rm dns.sh
-echo ""
 #wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
+echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
+echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
+echo -e  "|\033[0;33m         DARI SAYA BY TARAP KUHING          \033[0;33m|"
+echo -e  "|\033[0;33m        TAMBAHKAN DOMAIN KAMU  DISINI       \033[0;33m|"
+echo -e  "|\033[0;33m          KALAU TIDAK PUNYA DOMAIN          \033[0;33m|"
+echo -e  "|\033[0;33m          CHAT DI WA SAYA DULU OK....       \033[0;33m|"
+echo -e  "|\033[0;33m          https://wa.me/085754292950        \033[0;33m|"
+echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
+echo " "
+read -rp "Masukan domain kamu Disini : " -e dns
+    if [ -z $dns ]; then
+        echo -e "
+        Nothing input for domain!
+        Then a random domain will be created"
+    else
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/dns.sh && chmod +x dns.sh && ./dns.sh
+        echo "$dns" > /root/scdomain
+	echo "$dns" > /etc/xray/scdomain
+	echo "$dns" > /etc/xray/domain
+	echo "$dns" > /etc/v2ray/domain
+	echo $dns > /root/domain
+        echo "IP=$dns" > /var/lib/ipvps.conf
+    fi
 
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
