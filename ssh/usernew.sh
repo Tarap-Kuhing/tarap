@@ -6,12 +6,8 @@ clear
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domen=`cat /etc/xray/domain`
-sldomain=`cat /root/nsdomain`
-slkey=`cat /etc/slowdns/server.pub`
 else
 domen=`cat /etc/v2ray/domain`
-sldomain=`cat /root/nsdomain`
-slkey=`cat /etc/slowdns/server.pub`
 fi
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
@@ -65,12 +61,6 @@ echo -e "OVPN TCP    : http://$IP:89/tcp.ovpn"
 echo -e "OVPN UDP    : http://$IP:89/udp.ovpn"
 echo -e "OVPN SSL    : http://$IP:89/ssl.ovpn"
 echo -e "UDPGW       : 7100-7900" | tee -a /etc/log-create-user.log
-echo -e "\033[0;31m================================SLOWDNS=======================================\033[0;31m"
-echo -e "Domain Name System(DNS): 8.8.8.8"
-echo -e "Name Server(NS): $sldomain"
-echo -e "DNS PUBLIC KEY: $slkey"
-echo -e "Domain SlowDNS: $sldomain"
-echo -e "Port SlowDNS: 443,143,22,109"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Payload WSS" | tee -a /etc/log-create-user.log
 echo -e "
