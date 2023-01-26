@@ -162,20 +162,14 @@ sleep 0.5
 
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
-
+echo ""
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/dns.sh;chmod +x dns.sh;./dns.sh
+rm dns.sh
 echo ""
 #wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
 
-#Mendapatkan Domain
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|      PROCESS INSTALLED DOMAIN      |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 5
-clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/dns.sh && chmod +x dns.sh && ./dns.sh
-clear
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
