@@ -338,6 +338,7 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh"
+wget -O m-port "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-port.sh"
 wget -O m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh"
 wget -O m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vless.sh"
 wget -O running "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/running.sh"
@@ -388,6 +389,7 @@ wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix
 
 chmod +x sl-fix
 chmod +x menu
+chmod +x m-port
 chmod +x m-vmess
 chmod +x m-vless
 chmod +x running
