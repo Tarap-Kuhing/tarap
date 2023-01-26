@@ -162,20 +162,12 @@ sleep 0.5
 
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
+apt install jq curl -y
 echo ""
 #wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
-MYIP=$(wget -qO- ip4.icanhazip.com);
-apt install jq curl -y
-mkdir -p /etc/xray
-mkdir -p /etc/v2ray
-mkdir -p /root/nsdomain
-touch /etc/xray/domain
-touch /etc/v2ray/domain
-touch /etc/xray/scdomain
-touch /etc/v2ray/scdomain
-#
+echo ""
 DOMAIN=hendra93.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
