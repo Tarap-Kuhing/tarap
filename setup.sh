@@ -188,7 +188,7 @@ read -rp "Masukan domain kamu Disini : " -e dns
 	echo $dns > /root/domain
         echo "IP=$dns" > /var/lib/ipvps.conf
     fi
-
+clear
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
