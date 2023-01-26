@@ -166,29 +166,93 @@ echo ""
 #wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
-echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
-echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
-echo -e  "|\033[0;33m         DARI SAYA BY TARAP KUHING          \033[0;33m|"
-echo -e  "|\033[0;33m        TAMBAHKAN DOMAIN KAMU  DISINI       \033[0;33m|"
-echo -e  "|\033[0;33m          KALAU TIDAK PUNYA DOMAIN          \033[0;33m|"
-echo -e  "|\033[0;33m          CHAT DI WA SAYA DULU OK....       \033[0;33m|"
-echo -e  "|\033[0;33m          https://wa.me/085754292950        \033[0;33m|"
-echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
-echo " "
-read -rp "Masukan domain kamu Disini : " -e dns
-    if [ -z $dns ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/dns.sh && chmod +x dns.sh && ./dns.sh
-        echo "$dns" > /root/scdomain
-	echo "$dns" > /etc/xray/scdomain
-	echo "$dns" > /etc/xray/domain
-	echo "$dns" > /etc/v2ray/domain
-	echo $dns > /root/domain
-        echo "IP=$dns" > /var/lib/ipvps.conf
-    fi
+MYIP=$(wget -qO- ip4.icanhazip.com);
+apt install jq curl -y
+rm -f /root/domain
+rm -f /etc/v2ray/domain
+rm -f /etc/xray/domain
+rm -rf /etc/xray/scdomain
+rm -rf /etc/v2ray/domain
+rm -rf /root/nsdomain
+rm -rf /var/lib/ipvps.conf
+rm nsdomain
+rm domain
+mkdir -p /usr/bin/xray
+mkdir -p /usr/bin/v2ray
+mkdir -p /etc/xray
+mkdir -p /etc/v2ray
+echo "$dns" > /etc/v2ray/domain
+#
+DOMAIN=hendra93.my.id
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+subsl=$(</dev/urandom tr -dc a-z0-9 | head -c5)
+dns=${sub}.hendra93.my.id
+NS_DOMAIN=${sub}.hendra93.my.id
+CF_ID=merahjambo@gmail.com
+CF_KEY=86431de017f7bf317c3960061da2f87c8effb
+set -euo pipefail
+IP=$(wget -qO- ip4.icanhazip.com);
+echo "Updating DNS for ${dns}..."
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${dns}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"A","name":"'${dns}'","content":"'${IP}'","ttl":120,"proxied":false}')
+echo "Updating DNS NS for ${NS_DOMAIN}..."
+ZONE=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones?name=${DOMAIN}&status=active" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+RECORD=$(curl -sLX GET "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records?name=${NS_DOMAIN}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" | jq -r .result[0].id)
+
+if [[ "${#RECORD}" -le 10 ]]; then
+     RECORD=$(curl -sLX POST "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${dns}'","ttl":120,"proxied":false}' | jq -r .result.id)
+fi
+
+RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_records/${RECORD}" \
+     -H "X-Auth-Email: ${CF_ID}" \
+     -H "X-Auth-Key: ${CF_KEY}" \
+     -H "Content-Type: application/json" \
+     --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${dns}'","ttl":120,"proxied":false}')
+rm -rf /etc/xray/domain
+rm -rf /etc/v2ray/domain
+rm -rf /root/nsdomain
+echo "IP=""$dns" > /var/lib/ipvps.conf
+echo "Host : $dns"
+echo "$dns" > /root/scdomain
+echo "$dns" > /etc/xray/scdomain
+echo $dns > /root/domain
+echo "Host SlowDNS : $NS_DOMAIN"
+echo "$NS_DOMAIN" >> /root/nsdomain
+echo "$dns" > /etc/xray/domain
+echo "$dns" > /etc/v2ray/domain
+ fi
 
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
