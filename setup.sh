@@ -218,14 +218,6 @@ sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
-#Install OHP Websocket
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|           PROCESS INSTALLED SLOWDNS       |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-sleep 5
-clear
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/install-sldns && chmod +x install-sldns && ./install-sldns
-clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
@@ -270,7 +262,7 @@ echo ""
 echo ""
 echo "   >>> Service & Port "              | tee -a log-install.txt
 echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket            : 80 [ON]" | tee -a log-install.txt
+echo "   - SSH Websocket            : [ all port ]" | tee -a log-install.txt
 echo "   - SSH SSL Websocket        : 443, 444" | tee -a log-install.txt
 echo "   - Stunnel4                 : 8443, 8880" | tee -a log-install.txt
 echo "   - Dropbear                 : 109, 143" | tee -a log-install.txt
