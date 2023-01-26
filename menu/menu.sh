@@ -118,6 +118,8 @@ echo -e " [\e[36m•9\e[0m] Clear RAM Cache"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[36m•10\e[0m] [Perbaikan Eror]"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " [\e[36m•11\e[0m] [Daftar Port Server]"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e ""
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -138,6 +140,7 @@ case $opt in
 8) clear ; m-update ;;
 9) clear ; clearcache ;;
 10) clear ; sl-fix ;;
+11) clear ; m-port ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
