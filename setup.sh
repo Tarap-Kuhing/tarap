@@ -168,20 +168,13 @@ echo ""
 clear
 MYIP=$(wget -qO- ip4.icanhazip.com);
 apt install jq curl -y
-rm -f /root/domain
-rm -f /etc/v2ray/domain
-rm -f /etc/xray/domain
-rm -rf /etc/xray/scdomain
-rm -rf /etc/v2ray/domain
-rm -rf /root/nsdomain
-rm -rf /var/lib/ipvps.conf
-rm nsdomain
-rm domain
-mkdir -p /usr/bin/xray
-mkdir -p /usr/bin/v2ray
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
-echo "$dns" > /etc/v2ray/domain
+mkdir -p /root/nsdomain
+touch /etc/xray/domain
+touch /etc/v2ray/domain
+touch /etc/xray/scdomain
+touch /etc/v2ray/scdomain
 #
 DOMAIN=hendra93.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
