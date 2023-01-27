@@ -1,28 +1,22 @@
 #!/bin/bash
-# Mod By TARAP KUHING
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/Tarap-Kuhing/perizinan/main/ipvps.txt | grep $MYIP )
-if [ $MYIP = $MYIP ]; then
-echo -e "${NC}${GREEN}Permission Accepted...${NC}"
+CEKEXPIRED () {
+    today=$(date -d +1day +%Y-%m-%d)
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
+    else
+    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
+    exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+CEKEXPIRED
 else
-echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : "
-echo -e "${NC}${LIGHT}WhatsApp : 0857542929501545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Hendra2012"
+echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
