@@ -69,6 +69,9 @@ rm -rf auto-reboot
 rm -rf clearcache
 rm -rf restart
 rm -rf ohp
+rm -rf backup
+rm -rf autobackup
+rm -rf limitspeed
 
 # download menu
 cd /usr/bin
@@ -93,7 +96,10 @@ wget -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tar
 wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/clearcache.sh" && chmod +x /usr/bin/clearcache
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 
+wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 chmod +x ohp
 chmod +x menu
 chmod +x m-vmess
@@ -110,4 +116,7 @@ chmod +x m-tcp
 chmod +x auto-reboot
 chmod +x clearcache
 chmod +x restart
+chmod +x backup
+chmod +x autobackup
+chmod +x limitspeed
 cd
