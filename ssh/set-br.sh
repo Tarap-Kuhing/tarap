@@ -50,7 +50,7 @@ cd /usr/bin
 wget -O autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh"
 wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/strt.sh"
+wget -O strt "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/strt.sh"
 wget -O limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
