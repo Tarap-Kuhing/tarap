@@ -33,6 +33,10 @@ echo -e " [\e[36m•4\e[0m] Restart All Service"
 echo -e " [\e[36m•5\e[0m] Cek Bandwith"
 echo -e " [\e[36m•6\e[0m] Install TCP BBR"
 echo -e " [\e[36m•7\e[0m] Webmin Menu"
+echo -e " [\e[36m•8\e[0m] Limit Bandwith Speed Server"
+echo -e " [\e[36m•9\e[0m] Autobackup Data VPS"
+echo -e " [\e[36m•10\e[0m] Backup Data VPS"
+echo -e " [\e[36m•11\e[0m] Restore Data VPS"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -50,6 +54,10 @@ case $opt in
 5) clear ; bw ; exit ;;
 6) clear ; m-tcp ; exit ;;
 7) clear ; webmin ; exit ;;
+8) clear ; limitspeed ; exit ;;
+9) clear ; autobackup ; exit ;;
+10) clear ; backup ; exit ;;
+11) clear ; restore ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
