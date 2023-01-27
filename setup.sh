@@ -198,7 +198,7 @@ clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
+echo -e "${tyblue}|           PROCESS INSTALLED XRAY          |${NC}"
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 sleep 5
 clear
@@ -210,6 +210,13 @@ echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━�
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+#Install AUTOBACKUP
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "${tyblue}|       PROCESS INSTALLED AUTOBACKUP        |${NC}"
+echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+sleep 5
+clear
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #Install OHP Websocket
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|           PROCESS INSTALLED OHP           |${NC}"
@@ -295,6 +302,8 @@ echo "" | tee -a log-install.txt
 rm /root/setup.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
+rm /root/set-br.sh >/dev/null 2>&1
+rm /root/ohp.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
 echo " Install Script VPS By TARAP KUHING SELESAI......... "
 echo  ""
