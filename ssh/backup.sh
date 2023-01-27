@@ -28,20 +28,26 @@ clear
 echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
 rm -rf /root/backup
 mkdir /root/backup
-cp /etc/passwd backup/
-cp /etc/group backup/
-cp /etc/shadow backup/
-cp /etc/gshadow backup/
-cp -r /etc/wireguard backup/wireguard
-cp /etc/ppp/chap-secrets backup/chap-secrets
-cp /etc/ipsec.d/passwd backup/passwd1
-cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
-cp -r /var/lib/ backup/
-cp -r /home/sstp backup/sstp
-cp -r /etc/xray backup/xray
-cp -r /etc/trojan-go backup/trojan-go
-cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
-cp -r /home/vps/public_html backup/public_html
+sleep 1
+
+cp -r /root/.acme.sh /root/backup/ &> /dev/null
+cp /etc/passwd /root/backup/ &> /dev/null
+cp /etc/group /root/backup/ &> /dev/null
+cp /etc/shadow /root/backup/ &> /dev/null
+cp /etc/gshadow /root/backup/ &> /dev/null
+cp -r /etc/wireguard /root/backup/wireguard &> /dev/null
+cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
+cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
+cp /etc/shadowsocks-libev/akun.conf /root/backup/ss.conf &> /dev/null
+cp -r /var/lib /root/backup &> /dev/null
+cp -r /home/sstp /root/backup/sstp &> /dev/null
+cp -r /etc/v2ray /root/backup/v2ray &> /dev/null
+cp -r /etc/xray /root/backup/xray &> /dev/null
+cp -r /etc/trojan-go /root/backup/trojan-go &> /dev/null
+cp -r /usr/local/shadowsocksr/ /root/backup/shadowsocksr &> /dev/null
+cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
+cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
+cp /etc/crontab /root/backup/crontab &> /dev/null
 cd /root
 zip -r $IP-$date.zip backup > /dev/null 2>&1
 rclone copy /root/$IP-$date.zip dr:backup/
