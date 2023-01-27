@@ -1,24 +1,28 @@
 #!/bin/bash
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-# Link Hosting Kalian
-tarapkuhing="raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup"
-
+CEKEXPIRED () {
+    today=$(date -d +1day +%Y-%m-%d)
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
+    else
+    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
+    exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+CEKEXPIRED
+else
+echo -e "\e[31mPermission Denied!\e[0m";
+exit 0
+fi
+clear
 apt install rclone -y
 printf "q\n" | rclone config
-wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/rclone.conf"
+wget -O /root/.config/rclone/rclone.conf "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf"
 git clone  https://github.com/magnific0/wondershaper.git
 cd wondershaper
 make install
@@ -43,11 +47,11 @@ logfile ~/.msmtp.log
 EOF
 chown -R www-data:www-data /etc/msmtprc
 cd /usr/bin
-wget -O autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/autobackup.sh"
-wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/backup.sh"
-wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/restore.sh"
-wget -O strt "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/strt.sh"
-wget -O limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/backup/limitspeed.sh"
+wget -O autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh"
+wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh"
+wget -O strt "https://raw.githubusercontent.com/Tarap-Kuhing/scriptvps/main/ssh/strt.sh"
+wget -O limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh"
 chmod +x autobackup
 chmod +x backup
 chmod +x restore
