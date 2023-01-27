@@ -20,12 +20,12 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
+echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
 echo -e "${tyblue}|           ♡ PORT SERVER VPS AKTIF                |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
+echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
 echo -e "${tyblue}|●⏩ Open VPN                : 2086 ⏪             |${NC}"
 echo -e "${tyblue}|●⏩ SSH SSL Websocket       : 443 ⏪              |${NC}"
-echo -e "${tyblue}|●⏩ SSH Websocket           : [ all port ] ⏪     |${NC}"
+echo -e "${tyblue}|●⏩ SSH Websocket           : all port ⏪         |${NC}"
 echo -e "${tyblue}|●⏩ Stunnel                 : 8443,8880 ⏪        |${NC}"
 echo -e "${tyblue}|●⏩ Vmess WS TLS            : 443 ⏪              |${NC}"
 echo -e "${tyblue}|●⏩ Vless WS TLS            : 443 ⏪              |${NC}"
@@ -39,9 +39,9 @@ echo -e "${tyblue}|●⏩ Vmess WS none TLS       : 80 ⏪               |${NC}"
 echo -e "${tyblue}|●⏩ Vless WS none TLS       : 80 ⏪               |${NC}"
 echo -e "${tyblue}|●⏩ Trojan WS none TLS      : 80 ⏪               |${NC}"
 echo -e "${tyblue}|●⏩ Shadowsocks WS none TLS : 80 ⏪               |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
+echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
 echo -e "${tyblue}|            ♡ SCRIPT BY TARAP KUHING              |${NC}"
-echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
+echo -e "${tyblue}|━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━|${NC}"
 echo -e ""
 read -p " Select menu : " opt
 echo -e ""
