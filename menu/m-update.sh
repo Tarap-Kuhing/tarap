@@ -72,6 +72,7 @@ rm -rf ohp
 rm -rf backup
 rm -rf autobackup
 rm -rf limitspeed
+rm -rf m-theme
 
 # download menu
 cd /usr/bin
@@ -98,8 +99,9 @@ wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/m
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
-
 wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh" && chmod +x /usr/bin/limitspeed
+wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+
 chmod +x ohp
 chmod +x menu
 chmod +x m-vmess
@@ -119,4 +121,5 @@ chmod +x restart
 chmod +x backup
 chmod +x autobackup
 chmod +x limitspeed
+chmod +x m-theme
 cd
