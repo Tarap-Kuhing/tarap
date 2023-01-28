@@ -160,6 +160,8 @@ exit 0
 fi
 sleep 0.5
 
+mkdir -p /etc/tarap
+mkdir -p /etc/tarap/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo ""
@@ -189,6 +191,41 @@ read -rp "Masukan domain kamu Disini : " -e dns
         echo "IP=$dns" > /var/lib/ipvps.conf
     fi
 clear
+#THEME RED
+cat <<EOF>> /etc/tarap/theme/red
+BG : \E[40;1;41m
+TEXT : \033[0;31m
+EOF
+#THEME BLUE
+cat <<EOF>> /etc/tarap/theme/blue
+BG : \E[40;1;44m
+TEXT : \033[0;34m
+EOF
+#THEME GREEN
+cat <<EOF>> /etc/tarap/theme/green
+BG : \E[40;1;42m
+TEXT : \033[0;32m
+EOF
+#THEME YELLOW
+cat <<EOF>> /etc/tarap/theme/yellow
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME MAGENTA
+cat <<EOF>> /etc/tarap/theme/magenta
+BG : \E[40;1;43m
+TEXT : \033[0;33m
+EOF
+#THEME CYAN
+cat <<EOF>> /etc/tarap/theme/cyan
+BG : \E[40;1;46m
+TEXT : \033[0;36m
+EOF
+#THEME CONFIG
+cat <<EOF>> /etc/tarap/theme/color.conf
+blue
+EOF
+
 #install ssh ovpn
 echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
@@ -262,14 +299,14 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━"
+echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
 echo ""
 echo "   >>> Service & Port "              | tee -a log-install.txt
 echo "   - OpenSSH                  : 22"  | tee -a log-install.txt
-echo "   - SSH Websocket            : [ all port ]" | tee -a log-install.txt
+echo "   - SSH Websocket            : 80[on]" | tee -a log-install.txt
 echo "   - SSH SSL Websocket        : 443, 444" | tee -a log-install.txt
 echo "   - Stunnel4                 : 8443, 8880" | tee -a log-install.txt
 echo "   - Dropbear                 : 109, 143" | tee -a log-install.txt
@@ -292,10 +329,25 @@ echo "   - OHP SSH                  : 8181"| tee -a log-install.txt
 echo "   - OHP Dropbear             : 8282"| tee -a log-install.txt
 echo "   - OHP OpenVPN              : 8383"| tee -a log-install.txt
 echo ""
-echo ""
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo ""
-echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━"
+echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo ""  | tee -a log-install.txt
+echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +8)"  | tee -a log-install.txt
+echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
+echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
+echo "   - IPtables                : [ON]"  | tee -a log-install.txt
+echo "   - Auto-Reboot             : [ON]"  | tee -a log-install.txt
+echo "   - IPv6                    : [OFF]"  | tee -a log-install.txt
+echo "   - Autoreboot On           : $aureb:00 $gg GMT +8" | tee -a log-install.txt
+echo "   - Autobackup Data" | tee -a log-install.txt
+echo "   - AutoKill Multi Login User" | tee -a log-install.txt
+echo "   - Auto Delete Expired Account" | tee -a log-install.txt
+echo "   - Fully automatic script" | tee -a log-install.txt
+echo "   - VPS settings" | tee -a log-install.txt
+echo "   - Admin Control" | tee -a log-install.txt
+echo "   - Backup & Restore Data" | tee -a log-install.txt
+echo "   - Full Orders For Various Services" | tee -a log-install.txt
+echo "━━━━━━━━━━━━━━━━━━[ Script By TARAP KUHING ]━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
@@ -305,7 +357,7 @@ rm /root/insshws.sh >/dev/null 2>&1
 rm /root/set-br.sh >/dev/null 2>&1
 rm /root/ohp.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo " Install Script VPS By TARAP KUHING SELESAI......... "
+echo "${tyblue}Install Script VPS By TARAP KUHING SELESAI........${NC}"
 echo  ""
 sleep 3
 echo "R"
