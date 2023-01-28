@@ -165,8 +165,8 @@ mkdir -p /etc/tarap/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo ""
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
-rm tools.sh
+#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
+#rm tools.sh
 clear
 echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
 echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
