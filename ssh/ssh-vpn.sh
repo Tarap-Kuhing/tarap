@@ -370,6 +370,7 @@ wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/
 #wget -O port-change "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-change.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh"
 wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh"
+wget -O m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-thema"
 wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/speedtest_cli.py"
 wget -O swapkvm "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/swapkvm.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/auto-reboot.sh"
@@ -419,6 +420,7 @@ chmod +x add-host
 #chmod +x port-change
 chmod +x certv2ray
 chmod +x m-update
+chmod +x m-theme
 chmod +x speedtest
 chmod +x swapkvm
 chmod +x auto-reboot
