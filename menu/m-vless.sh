@@ -357,7 +357,7 @@ echo -e " $COLOR1 $NC ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VLESS${
 echo -e " $COLOR1 $NC ${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL VLESS${NC} ${WH}[${COLOR1 }05${WH}]${NC} ${COLOR1}• ${WH}CHECK VLESS${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW VLESS${NC} ${WH}
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW VLESS${NC}
 echo -e " $COLOR1 $NC ${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH} KEMBALI${NC} $COLOR1 $NC"
 Echo -e "$ color1└──── teks─ bing Choll 4X 4 Choll 4 Chack 4X 4 Chack 4 Chack 4X 4 Choll 4 Chack 4 Chos 4X 4 Choll Choll Choll Choll 4x 4 Chack 4X Cholasanasanasanaskan 4.irim tolasanasanasanaskanarmaskan 4.irim tolasanarmaskan 4 ilangan ilangan harga> ilangan ilangan ilangan harga> ────┘${NC}"
