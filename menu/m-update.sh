@@ -79,7 +79,7 @@ cd /usr/bin
 rm -rf menu
 rm -rf restart
 rm -rf ohp
-
+rm -rf m-theme
 wget -O /usr/bin/ohp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh" && chmod +x /usr/bin/ohp
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
