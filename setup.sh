@@ -357,26 +357,26 @@ rm /root/insshws.sh >/dev/null 2>&1
 rm /root/set-br.sh >/dev/null 2>&1
 rm /root/ohp.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo -e"                  ${tyblue}┌────────────────────────────────────────────┐${NC}"
-echo "                    ${tyblue}|Install Script VPS By TARAP KUHING SELESAI..|${NC}"
-echo -e"                  ${tyblue}└────────────────────────────────────────────┘${NC}"
+echo -e "                 ${tyblue}┌────────────────────────────────────────────┐${NC}"
+echo -e "                 ${tyblue}|Install Script VPS By TARAP KUHING SELESAI..|${NC}"
+echo -e "                 ${tyblue}└────────────────────────────────────────────┘${NC}"
 echo  ""
 sleep 3
-echo -e"                                               ${tyblue}R${NC}"
+echo -e "                                              ${tyblue}R${NC}"
 echo  ""
 sleep 3
-echo -e"                                               ${tyblue}E${NC}"
+echo -e "                                              ${tyblue}E${NC}"
 echo  ""
 sleep 3
-echo -e"                                               ${tyblue}B${NC}"
+echo -e "                                              ${tyblue}B${NC}"
 echo ""
 sleep 3
-echo -e"                                               ${tyblue}O${NC}"
+echo -e "                                              ${tyblue}O${NC}"
 echo ""
 sleep 3
-echo -e"                                               ${tyblue}O${NC}"
+echo -e "                                              ${tyblue}O${NC}"
 echo  ""
 sleep 3
-echo -e"                                               ${tyblue}T${NC}"
+echo -e "                                              ${tyblue}T${NC}"
 sleep 3
 reboot
