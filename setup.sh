@@ -168,14 +168,14 @@ echo ""
 #wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 #rm tools.sh
 clear
-echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
-echo -e  "|\033[0;33m    TERIMA KASIH SUDAH MENGGUNAKAN SCRIPT   \033[0;33m|"
-echo -e  "|\033[0;33m         DARI SAYA BY TARAP KUHING          \033[0;33m|"
-echo -e  "|\033[0;33m        TAMBAHKAN DOMAIN KAMU  DISINI       \033[0;33m|"
-echo -e  "|\033[0;33m          KALAU TIDAK PUNYA DOMAIN          \033[0;33m|"
-echo -e  "|\033[0;33m          CHAT DI WA SAYA DULU OK....       \033[0;33m|"
-echo -e  "|\033[0;33m          https://wa.me/085754292950        \033[0;33m|"
-echo -e  "|\033[1;31m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m|"
+echo -e  "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e  "               ${tyblue}|              TERIMA KASIH                |${NC}"
+echo -e  "               ${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
+echo -e  "               ${tyblue}|                DARI SAYA                 |${NC}"
+echo -e  "               ${tyblue}|            BY TARAP KUHING               |${NC}"
+echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT WA           |${NC}"
+echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
+echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 read -rp "Masukan domain kamu Disini : " -e dns
     if [ -z $dns ]; then
@@ -227,37 +227,37 @@ blue
 EOF
 
 #install ssh ovpn
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN      |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|           PROCESS INSTALLED XRAY          |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY          |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Install SSH Websocket
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH     |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH    |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install AUTOBACKUP
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|       PROCESS INSTALLED AUTOBACKUP        |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|       PROCESS INSTALLED AUTOBACKUP       |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #Install OHP Websocket
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
-echo -e "${tyblue}|           PROCESS INSTALLED OHP           |${NC}"
-echo -e "${tyblue}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}"
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|           PROCESS INSTALLED OHP          |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
@@ -332,7 +332,7 @@ echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/Jakarta (GMT +8)"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt
@@ -357,23 +357,26 @@ rm /root/insshws.sh >/dev/null 2>&1
 rm /root/set-br.sh >/dev/null 2>&1
 rm /root/ohp.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
-echo "${tyblue}Install Script VPS By TARAP KUHING SELESAI........${NC}"
+echo -e"                  ${tyblue}┌────────────────────────────────────────────┐${NC}"
+echo "                    ${tyblue}|Install Script VPS By TARAP KUHING SELESAI..|${NC}"
+echo -e"                  ${tyblue}└────────────────────────────────────────────┘${NC}"
 echo  ""
 sleep 3
-echo "R"
+echo -e"                                               ${tyblue}R${NC}"
 echo  ""
 sleep 3
-echo "E"
+echo -e"                                               ${tyblue}E${NC}"
 echo  ""
 sleep 3
-echo "B"
+echo -e"                                               ${tyblue}B${NC}"
 echo ""
 sleep 3
-echo "O"
+echo -e"                                               ${tyblue}O${NC}"
 echo ""
 sleep 3
-echo "O"
+echo -e"                                               ${tyblue}O${NC}"
 echo  ""
-echo "T"
-sleep 1
+sleep 3
+echo -e"                                               ${tyblue}T${NC}"
+sleep 3
 reboot
