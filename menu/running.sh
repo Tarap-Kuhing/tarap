@@ -1,34 +1,81 @@
 #!/bin/bash
-GREEN='\033[0;32m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-NC='\033[0m'
-yl='\e[32;1m'
-bl='\e[36;1m'
-gl='\e[32;1m'
-rd='\e[31;1m'
-mg='\e[0;95m'
-blu='\e[34m'
-op='\e[35m'
-or='\033[1;33m'
-bd='\e[1m'
-color1='\e[031;1m'
-color2='\e[34;1m'
-color3='\e[0m'
-# Getting
-# IP Validation
+GREEN#!/bin/bash
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
-#########################
+###########- COLOR CODE -##############
+colornow=$(cat /etc/tarap/theme/color.conf)
+export NC="\e[0m"
+export YELLOW='\033[0;33m';
+export RED="\033[0;31m"
+export COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+export COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
+tram=$( free -h | awk 'NR==2 {print $2}' )
+uram=$( free -h | awk 'NR==2 {print $3}' )
+ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+CITY=$(curl -s ipinfo.io/city )
 
-MYIP=$(curl -sS ipinfo.io/ip)
 
-red='\e[1;31m'
-green='\e[1;32m'
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+BURIQ () {
+    curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip > /root/tmp
+    data=( `cat /root/tmp | grep -E "^### " | awk '{print $2}'` )
+    for user in "${data[@]}"
+    do
+    exp=( `grep -E "^### $user" "/root/tmp" | awk '{print $3}'` )
+    d1=(`date -d "$exp" +%s`)
+    d2=(`date -d "$biji" +%s`)
+    exp2=$(( (d1 - d2) / 86400 ))
+    if [[ "$exp2" -le "0" ]]; then
+    echo $user > /etc/.$user.ini
+    else
+    rm -f /etc/.$user.ini > /dev/null 2>&1
+    fi
+    done
+    rm -f /root/tmp
+}
+
+MYIP=$(curl -sS ipv4.icanhazip.com)
+Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $2}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $5}')
+echo $Name > /usr/local/etc/.$Name.ini
+CekOne=$(cat /usr/local/etc/.$Name.ini)
+
+Bloman () {
+if [ -f "/etc/.$Name.ini" ]; then
+CekTwo=$(cat /etc/.$Name.ini)
+    if [ "$CekOne" = "$CekTwo" ]; then
+        res="Expired"
+    fi
+else
+res="Permission Accepted..."
+fi
+}
+
+PERMISSION () {
+    MYIP=$(curl -sS ipv4.icanhazip.com)
+    IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+    if [ "$MYIP" = "$IZIN" ]; then
+    Bloman
+    else
+    res="Permission Denied!"
+    fi
+    BURIQ
+}
+
+x="ok"
+
+
 PERMISSION
+
+if [ "$res" = "Expired" ]; then
+Exp="\e[36mExpired\033[0m"
+rm -f /home/needupdate > /dev/null 2>&1
+else
+Exp=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
+fi
+export RED='\033[0;31m'
+export GREEN='\033[0;32m'
 clear
 
 # GETTING OS INFORMATION
@@ -318,9 +365,9 @@ echo -e "$COLOR1 ${NC}                ${WH}⇱ SERVICE INFORMATION ⇲${NC}     
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1┌───────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ SSH / TUN$NC               ${COLOR1}: ${WH}$status_ssh${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ OpenVPN$NC                 ${COLOR1}: ${WH}$status_openvpn${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ Dropbear$NC                ${COLOR1}: ${WH}$status_beruangjatuh${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ SSH / TUN               ${COLOR1}: ${WH}$status_ssh${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ OpenVPN                 ${COLOR1}: ${WH}$status_openvpn${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ Dropbear                ${COLOR1}: ${WH}$status_beruangjatuh${NC}"
 echo -e "$COLOR1 $NC  ${WH}❇️ Stunnel4                ${COLOR1}: ${WH}$status_stunnel${NC}"
 #echo -e "❇️ Squid                   :$status_squid"
 echo -e "$COLOR1 $NC  ${WH}❇️ Fail2Ban                ${COLOR1}: ${WH}$status_fail2ban${NC}"
