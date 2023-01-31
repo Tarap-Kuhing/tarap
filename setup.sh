@@ -235,7 +235,7 @@ clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY           |${NC}"
+echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
