@@ -326,7 +326,7 @@ echo "   - Trojan gRPC              : 443" | tee -a log-install.txt
 echo "   - Shadowsocks gRPC         : 443" | tee -a log-install.txt
 echo "   - Websocket Ovpn           : 2086"| tee -a log-install.txt
 echo "   - OHP SSH                  : 8181"| tee -a log-install.txt
-echo "   - OHP Dropbear             : 8282"| tee -a log-install.txt
+echo "   - OHP Dropbear             : 8282"
 echo "   - OHP OpenVPN              : 8383"| tee -a log-install.txt
 echo ""
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
