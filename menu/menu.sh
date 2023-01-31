@@ -278,7 +278,7 @@ echo -e "$COLOR1┌────────────────────�
 echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}                 ${WH}• SEWA SCRIPT •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}                  ${WH}• PREMIUM •${NC}                    $COLOR1 $NC"
-echo -e "$COLOR1 ${NC}                ${WH}• WA : 085754292950 •${NC}             $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}           ${WH}• WA : 085754292950 •${NC}             $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
