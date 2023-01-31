@@ -38,7 +38,7 @@ echo -e ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; add-host ; clear ; certv2ray ;;
+1) clear ; add-host ; certv2ray ;;
 2) clear ; certv2ray ;;
 0) clear ; menu ;;
 x) exit ;;
