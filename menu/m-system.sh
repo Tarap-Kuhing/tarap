@@ -49,7 +49,7 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR  ${WH}"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
+echo -e " $COLOR1 $NC                         ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -67,5 +67,5 @@ case $opt in
 11 |11) clear ; restore ; exit ;;
 00 |0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo -e "" ; echo " ${WH}Anda salah tekan ${COLOR1} ${WH}" ; sleep 1 ; m-system ;;
+*) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
 esac
