@@ -235,7 +235,7 @@ clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY          |${NC}"
+echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY           |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
 sleep 5
 clear
@@ -362,21 +362,21 @@ echo -e "                 ${tyblue}|Install Script VPS By TARAP KUHING SELESAI..
 echo -e "                 ${tyblue}└────────────────────────────────────────────┘${NC}"
 echo  ""
 sleep 3
-echo -e "                                              ${tyblue}R${NC}"
+echo -e "                                      ${tyblue}R${NC}"
 echo  ""
 sleep 3
-echo -e "                                              ${tyblue}E${NC}"
+echo -e "                                      ${tyblue}E${NC}"
 echo  ""
 sleep 3
-echo -e "                                              ${tyblue}B${NC}"
+echo -e "                                      ${tyblue}B${NC}"
 echo ""
 sleep 3
-echo -e "                                              ${tyblue}O${NC}"
+echo -e "                                      ${tyblue}O${NC}"
 echo ""
 sleep 3
-echo -e "                                              ${tyblue}O${NC}"
+echo -e "                                      ${tyblue}O${NC}"
 echo  ""
 sleep 3
-echo -e "                                              ${tyblue}T${NC}"
+echo -e "                                      ${tyblue}T${NC}"
 sleep 3
 reboot
