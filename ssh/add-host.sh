@@ -73,12 +73,10 @@ echo ""
 if [ -z $host ]; then
 echo "????"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
 else
 echo "IP=$host" > /var/lib/ipvps.conf
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo "Dont forget to renew cert"
+certv2ray
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
