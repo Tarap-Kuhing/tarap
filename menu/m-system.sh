@@ -1,4 +1,14 @@
 #!/bin/bash
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/tarap/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m"
+COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
@@ -22,43 +32,40 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[0;100;33m          • SYSTEM MENU •          \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SYSTEM MENU •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}PANEL DOMAIN   ${WH}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}WEBMIN MENU ${WH}  $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST   ${WH}     ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}LIMIT SPEED SERVER ${WH} $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}AUTO REBOOT   ${WH}   ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}AUTO BACKUP DATA  ${WH}  $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}BACKUP DATA ${WH}        $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}RESTORE DATA   $COLOR1 $NC"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR  ${WH}"
+echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e " $COLOR1 $NC ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
-echo -e " [\e[36m•1\e[0m] Panel Domain"
-echo -e " [\e[36m•2\e[0m] Speedtest VPS"
-echo -e " [\e[36m•3\e[0m] Set Auto Reboot"
-echo -e " [\e[36m•4\e[0m] Restart All Service"
-echo -e " [\e[36m•5\e[0m] Cek Bandwith"
-echo -e " [\e[36m•6\e[0m] Install TCP BBR"
-echo -e " [\e[36m•7\e[0m] Webmin Menu"
-echo -e " [\e[36m•8\e[0m] Limit Bandwith Speed Server"
-echo -e " [\e[36m•9\e[0m] Autobackup Data VPS"
-echo -e " [\e[36m•10\e[0m] Backup Data VPS"
-echo -e " [\e[36m•11\e[0m] Restore Data VPS"
-echo -e ""
-echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
-echo -e   ""
-echo -e   "Press x or [ Ctrl+C ] • To-Exit"
-echo -e   ""
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e ""
-read -p " Select menu : " opt
-echo -e ""
+echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-1) clear ; m-domain ; exit ;;
-2) clear ; speedtest ; exit ;;
-3) clear ; auto-reboot ; exit ;;
-4) clear ; restart ; exit ;;
-5) clear ; bw ; exit ;;
-6) clear ; m-tcp ; exit ;;
-7) clear ; webmin ; exit ;;
-8) clear ; limitspeed ; exit ;;
-9) clear ; autobackup ; exit ;;
-10) clear ; backup ; exit ;;
-11) clear ; restore ; exit ;;
-0) clear ; menu ; exit ;;
+01 |1) clear ; m-domain ; exit ;;
+02 |2) clear ; speedtest ; exit ;;
+03 |3) clear ; auto-reboot ; exit ;;
+04 |4) clear ; restart ; exit ;;
+05 |5) clear ; bw ; exit ;;
+06 |6) clear ; m-tcp ; exit ;;
+07 |7) clear ; webmin ; exit ;;
+08 |8) clear ; limitspeed ; exit ;;
+09 |9) clear ; autobackup ; exit ;;
+10 |10) clear ; backup ; exit ;;
+11 |11) clear ; restore ; exit ;;
+00 |0) clear ; menu ; exit ;;
 x) exit ;;
-*) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
+*) echo -e "" ; echo " ${WH}Anda salah tekan ${COLOR1} ${WH}" ; sleep 1 ; m-system ;;
 esac
