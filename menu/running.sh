@@ -270,8 +270,20 @@ totalram=$(($total_ram/1024))
 kernelku=$(uname -r)
 
 # WAKTU SEKARANG
-#harini=`date -d "0 days" +"%d-%m-%Y"`
-#jam=`date -d "0 days" +"%X"`
+DATE=$(date +'%Y-%m-%d')
+datediff() {
+    d1=$(date -d "$1" +%s)
+    d2=$(date -d "$2" +%s)
+    echo -e "$COLOR1 $NC Expiry In   : $(( (d1 - d2) / 86400 )) Days"
+}
+mai="datediff "$Exp" "$DATE""
+
+today=`date -d "0 days" +"%Y-%m-%d"`
+
+# CERTIFICATE STATUS
+d1=$(date -d "$exp" +%s)
+d2=$(date -d "$today" +%s)
+certificate=$(( (d1 - d2) / 86400 ))
 
 # DNS PATCH
 #tipeos2=$(uname -m)
