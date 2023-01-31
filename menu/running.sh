@@ -288,7 +288,6 @@ certificate=$(( (d1 - d2) / 86400 ))
 # DNS PATCH
 #tipeos2=$(uname -m)
 Name=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $2}')
-Exp=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
 # GETTING DOMAIN NAME
 Domen="$(cat /etc/xray/domain)"
 echo -e ""
@@ -319,9 +318,9 @@ echo -e "$COLOR1 ${NC}                ${WH}⇱ SERVICE INFORMATION ⇲${NC}     
 echo -e "$COLOR1└───────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1┌───────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ SSH / TUN               ${COLOR1}: ${WH}$status_ssh${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ OpenVPN                 ${COLOR1}: ${WH}$status_openvpn${NC}"
-echo -e "$COLOR1 $NC  ${WH}❇️ Dropbear                ${COLOR1}: ${WH}$status_beruangjatuh${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ SSH / TUN$NC"               ${COLOR1}: ${WH}$status_ssh${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ OpenVPN$NC"                 ${COLOR1}: ${WH}$status_openvpn${NC}"
+echo -e "$COLOR1 $NC  ${WH}❇️ Dropbear$NC"                ${COLOR1}: ${WH}$status_beruangjatuh${NC}"
 echo -e "$COLOR1 $NC  ${WH}❇️ Stunnel4                ${COLOR1}: ${WH}$status_stunnel${NC}"
 #echo -e "❇️ Squid                   :$status_squid"
 echo -e "$COLOR1 $NC  ${WH}❇️ Fail2Ban                ${COLOR1}: ${WH}$status_fail2ban${NC}"
