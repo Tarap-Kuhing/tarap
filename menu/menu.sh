@@ -229,7 +229,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday       Month   ${NC}"
 echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv      $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
-echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv      $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
+echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv     $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -270,7 +270,7 @@ d2=$(date -d "$today" +%s)
 certificate=$(( (d1 - d2) / 86400 ))
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐$NC"
-echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}:${WH} $(cat /opt/.ver) Latest Version${NC}"
+echo -e "$COLOR1 $NC ${WH}Version     ${COLOR1}: ${WH}$(cat /opt/.ver) Latest Version${NC}"
 echo -e "$COLOR1 $NC ${WH}Client Name ${COLOR1}: ${WH}$Name${NC}"
 echo -e "$COLOR1 $NC ${WH}License     ${COLOR1}: ${WH}$certificate days${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘$NC"
