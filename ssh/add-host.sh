@@ -72,16 +72,16 @@ fi
 cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 
 clear
-echo -e  "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
-echo -e  "               ${tyblue}|              TERIMA KASIH                |${NC}"
-echo -e  "               ${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
-echo -e  "               ${tyblue}|                DARI SAYA                 |${NC}"
-echo -e  "               ${tyblue}|            BY TARAP KUHING               |${NC}"
-echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT WA           |${NC}"
-echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
-echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
-echo " "
-read -rp " ${WH}Select menu ${COLOR1}: ${WH}"; -e host
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• TERIMA KASIH SUDAH •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• MENGGUNAKAN SCRIPT •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• PREMIUM DARI SAYA  •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• KALAU ADA KENDALA  •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• CHAT SAYA LEWAT WA •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}          ${WH}• https:/wa.me/085754292950 •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1 ${NC}
+read -rp "Masukan Domain/Host" -e host
 echo ""
 if [ -z $host ]; then
 else
