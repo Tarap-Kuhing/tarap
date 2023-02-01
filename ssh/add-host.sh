@@ -71,12 +71,12 @@ exit 0
 fi
 clear
 echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• TERIMA KASIH SUDAH •         ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• MENGGUNAKAN SCRIPT •         ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• PREMIUM DARI SAYA  •         ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• KALAU ADA KENDALA  •         ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CHAT SAYA LEWAT WA •         ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}        ${WH}• https:/wa.me/085754292950 •     ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• TERIMA KASIH SUDAH •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• MENGGUNAKAN SCRIPT •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• PREMIUM DARI SAYA  •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• KALAU ADA KENDALA  •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CHAT SAYA LEWAT WA •          ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}        ${WH}• https:/wa.me/085754292950 •      ${NC} $COLOR1 $NC"
 echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
 read -rp "  New Host/domain : " -e dns
