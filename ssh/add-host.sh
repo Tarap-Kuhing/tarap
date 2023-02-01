@@ -69,22 +69,30 @@ else
 red "Permission Denied!"
 exit 0
 fi
-cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
-
 clear
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• TERIMA KASIH SUDAH •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• MENGGUNAKAN SCRIPT •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• PREMIUM DARI SAYA  •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• KALAU ADA KENDALA  •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• CHAT SAYA LEWAT WA •              ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}          ${WH}• https:/wa.me/085754292950 •          ${NC} $COLOR1 $NC"
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}"
-read -rp "Masukan Domain/Host : " -e host
+echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• TERIMA KASIH SUDAH •         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• MENGGUNAKAN SCRIPT •         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• PREMIUM DARI SAYA  •         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• KALAU ADA KENDALA  •         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CHAT SAYA LEWAT WA •         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}        ${WH}• https:/wa.me/085754292950 •     ${NC} $COLOR1 $NC"
+echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e " $COLOR1┌─────────────────────────────────────────────────┐${NC}"
+read -rp "  New Host/domain : " -e dns
 echo ""
-if [ -z $host ]; then
+if [ -z $dns ]; then
+echo -e "  [INFO] Type Your Domain/sub domain"
+echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
-echo "IP=$host" > /var/lib/ipvps.conf
+echo "IP=$dns" > /var/lib/ipvps.conf
+rm -rf /etc/xray/domain
+echo $dns > /etc/xray/domain
+echo ""
+echo "  [INFO] Dont forget to renew cert"
+echo ""
+echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo ""
+read -n 1 -s -r -p "  Press any key to Renew Cret"
 certv2ray
 fi
