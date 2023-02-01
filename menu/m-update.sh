@@ -51,6 +51,8 @@ rm -rf backup
 rm -rf autobackup
 rm -rf limitspeed
 rm -rf m-theme
+rm -rf add-host
+
 # download menu
 cd /usr/bin
 rm -rf menu
@@ -91,6 +93,7 @@ wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/ma
 wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
+wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
 
 chmod +x menu
 chmod +x m-vmess
@@ -110,4 +113,5 @@ chmod +x backup
 chmod +x autobackup
 chmod +x limitspeed
 chmod +x m-theme
+chmod +x add-host
 cd
