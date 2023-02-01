@@ -82,7 +82,7 @@ echo -e " $COLOR1┌────────────────────
  $COLOR1 $NC                                              ${NC} $COLOR1 $NC
  $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE SSH      ${WH}[${COLOR1}09${WH}]${NC} ${COLOR1}• ${WH}CEK MULTI LOGIN${NC} $COLOR1 $NC
  $COLOR1 $NC                                              ${NC} $COLOR1 $NC
- $COLOR1 $NC   ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}CHECK USERS     $COLOR1 $NC
+ $COLOR1 $NC   ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CHECK USERS     $COLOR1 $NC
  $COLOR1 $NC                                              ${NC} $COLOR1 $NC
  $COLOR1 $NC   ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                              $COLOR1 $NC"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}"
