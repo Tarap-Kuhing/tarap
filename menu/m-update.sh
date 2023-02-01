@@ -26,7 +26,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e "\E[44;1;39m ⇱ [INFO] Downloading Update File⇲        \E[0m"
-sleep 5
+sleep 3
 echo -e "\033[0;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[m"
 echo -e "\E[44;1;39m              ⇱ UPDATE ⇲                      \E[0m"
 echo -e "\E[44;1;39m              ⇱ DIMULAI ⇲                     \E[0m"
@@ -52,6 +52,36 @@ rm -rf autobackup
 rm -rf limitspeed
 rm -rf m-theme
 rm -rf add-host
+rm -rf usernew
+rm -rf trial
+rm -rf tendang
+rm -rf member
+rm -rf hapus
+rm -rf cek
+rm -rf autokill
+rm -rf ceklim
+rm -rf delete
+rm -rf renew
+rm -rf add-vmess
+rm -rf add-vless
+rm -rf add-tr
+rm -rf add-ssws
+rm -rf trialvmess
+rm -rf trialvless
+rm -rf trialtrojan
+rm -rf trialssws
+rm -rf renew-vmess
+rm -rf renew-vless
+rm -rf renew-tr
+rm -rf renew-ssws
+rm -rf del-vmes
+rm -rf del-vless
+rm -rf del-tr
+rm -rf del-ssws
+rm -rf cek-vmess
+rm -rf cek-vless
+rm -rf cek-tr
+rm -rf cek-ssws
 
 # download menu
 cd /usr/bin
@@ -73,6 +103,36 @@ rm -rf backup
 rm -rf autobackup
 rm -rf limitspeed
 rm -rf m-theme
+rm -rf usernew
+rm -rf trial
+rm -rf tendang
+rm -rf member
+rm -rf hapus
+rm -rf cek
+rm -rf autokill
+rm -rf ceklim
+rm -rf delete
+rm -rf renew
+rm -rf add-vmess
+rm -rf add-vless
+rm -rf add-tr
+rm -rf add-ssws
+rm -rf trialvmess
+rm -rf trialvless
+rm -rf trialtrojan
+rm -rf trialssws
+rm -rf renew-vmess
+rm -rf renew-vless
+rm -rf renew-tr
+rm -rf renew-ssws
+rm -rf del-vmes
+rm -rf del-vless
+rm -rf del-tr
+rm -rf del-ssws
+rm -rf cek-vmess
+rm -rf cek-vless
+rm -rf cek-tr
+rm -rf cek-ssws
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -95,6 +155,37 @@ wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tara
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
 wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
 
+wget -O /usr/bin/usernew "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/usernew.sh" && chmod +x /usr/bin/usernew
+wget -O /usr/bin/trial "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/trial.sh" && chmod +x /usr/bin/trial
+wget -O /usr/bin/tendang "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/tendang.sh" && chmod +x /usr/bin/tendang
+wget -O /usr/bin/member "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/member.sh" && chmod +x /usr/bin/member
+wget -O /usr/bin/hapus "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/hapus.sh" && chmod +x /usr/bin/hapus
+wget -O /usr/bin/cek "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/cek.sh" && chmod +x /usr/bin/cek
+wget -O /usr/bin/autokill "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autokill.sh" && chmod +x /usr/bin/autokill
+wget -O /usr/bin/ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ceklim.sh" && chmod +x /usr/bin/ceklim
+wget -O /usr/bin/delete "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/delete.sh" && chmod +x /usr/bin/add-host
+wget -O /usr/bin/renew "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/renew.sh" && chmod +x /usr/bin/add-host
+wget -O /usr/bin/add-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vmess.sh" && chmod +x /usr/bin/add-vmess
+wget -O /usr/bin/add-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
+wget -O /usr/bin/add-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
+wget -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+wget -O /usr/bin/trialvmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialvmess.sh" && chmod +x /usr/bin/trialvmess
+wget -O /usr/bin/trialvless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialvless.sh" && chmod +x /usr/bin/trialvless
+wget -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
+wget -O /usr/bin/trialssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialssws.sh" && chmod +x /usr/bin/trialssws
+wget -O /usr/bin/renew-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-vmess.sh" && chmod +x /usr/bin/renew-vmess
+wget -O /usr/bin/renew-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-vless.sh" && chmod +x /usr/bin/renew-vless
+wget -O /usr/bin/renew-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/renew-tr.sh" && chmod +x /usr/binrenew-tr
+wget -O /usr/bin/renew-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-ssws.sh" && chmod +x /usr/bin/renew-ssws
+wget -O /usr/bin/del-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xraydel-vmess.sh" && chmod +x /usr/bin/del-vmess
+wget -O /usr/bin/del-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-vless.sh" && chmod +x /usr/bindel-vless
+wget -O /usr/bin/del-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-tr.sh" && chmod +x /usr/bin/del-tr
+wget -O /usr/bin/del-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-ssws.sh" && chmod +x /usr/bin/del-ssws
+wget -O /usr/bin/cek-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-vmess.sh" && chmod +x /usr/bin/cek-vmess
+wget -O /usr/bin/cek-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-vless.sh" && chmod +x /usr/bin/cek-vless
+wget -O /usr/bin/cek-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-tr.sh" && chmod +x /usr/bin/cek-tr
+wget -O /usr/bin/cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-ssws.sh" && chmod +x /usr/bin/cek-ssws
+
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -114,4 +205,34 @@ chmod +x autobackup
 chmod +x limitspeed
 chmod +x m-theme
 chmod +x add-host
+chmod +x usernew
+chmod +x trial
+chmod +x tendang
+chmod +x member
+chmod +x hapus
+chmod +x cek
+chmod +x autokill
+chmod +x ceklim
+chmod +x delete
+chmod +x renew
+chmod +x add-vmess
+chmod +x add-vless
+chmod +x add-tr
+chmod +x add-ssws
+chmod +x trialvmess
+chmod +x trialvless
+chmod +x trialtrojan
+chmod +x trialssws
+chmod +x renew-vmess
+chmod +x renew-vless
+chmod +x renew-tr
+chmod +x renew-ssws
+chmod +x del-vmes
+chmod +x del-vless
+chmod +x del-tr
+chmod +x del-ssws
+chmod +x cek-vmess
+chmod +x cek-vless
+chmod +x cek-tr
+chmod +x cek-ssws
 cd
