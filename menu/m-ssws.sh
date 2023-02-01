@@ -86,11 +86,11 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-01 | 1) clear ; addssws ;;
+01 | 1) clear ; add-ssws ;;
 02 | 2) clear ; trialssws ;;
-03 | 3) clear ; renewssws ;;
-04 | 4) clear ; delssws ;;
-05 | 5) clear ; cekssws ;;
+03 | 3) clear ; renew-ssws ;;
+04 | 4) clear ; del-ssws ;;
+05 | 5) clear ; cek-ssws ;;
 00 | 0) clear ; menu ;;
 x) exit ;;
 *) echo "salah tekan" ; sleep 1 ; m-ssws ;;
