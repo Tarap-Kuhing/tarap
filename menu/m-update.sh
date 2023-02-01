@@ -82,6 +82,7 @@ rm -rf cek-vmess
 rm -rf cek-vless
 rm -rf cek-tr
 rm -rf cek-ssws
+rm -rf certv2ray
 
 # download menu
 cd /usr/bin
@@ -133,6 +134,7 @@ rm -rf cek-vmess
 rm -rf cek-vless
 rm -rf cek-tr
 rm -rf cek-ssws
+rm -rf certv2ray
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -185,6 +187,7 @@ wget -O /usr/bin/cek-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap
 wget -O /usr/bin/cek-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-vless.sh" && chmod +x /usr/bin/cek-vless
 wget -O /usr/bin/cek-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-tr.sh" && chmod +x /usr/bin/cek-tr
 wget -O /usr/bin/cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-ssws.sh" && chmod +x /usr/bin/cek-ssws
+wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
 
 chmod +x menu
 chmod +x m-vmess
@@ -235,4 +238,5 @@ chmod +x cek-vmess
 chmod +x cek-vless
 chmod +x cek-tr
 chmod +x cek-ssws
+chmod +x certv2ray
 cd
