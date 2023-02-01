@@ -262,6 +262,13 @@ sleep 5
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
+#Download Extra Menu
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+sleep 2
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh && chmod +x update.sh && ./update.sh
+clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
