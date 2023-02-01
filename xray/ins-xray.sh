@@ -354,7 +354,7 @@ WantedBy=multi-user.target
 EOF
 cat > /etc/systemd/system/runn.service <<EOF
 [Unit]
-Description=Mantap-Sayang
+Description=TARAP-KUHING
 After=network.target
 
 [Service]
