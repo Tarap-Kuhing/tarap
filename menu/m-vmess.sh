@@ -77,7 +77,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}ADD VMESS${NC}      ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}DELETE VMESS${NC}   $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL VMESS${NC}    ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}USER VMESS${NC}    $COLOR1 $NC"
+echo -e " $COLOR1 $NC   ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}TRIAL VMESS${NC}    ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}USER VMESS${NC}    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e " $COLOR1 $NC   ${WH}[${COLOR1}03${WH}]${NC} ${COLOR1}• ${WH}RENEW VMESS${NC}"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
