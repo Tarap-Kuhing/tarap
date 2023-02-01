@@ -173,7 +173,7 @@ echo -e  "               ${tyblue}|              TERIMA KASIH                |${
 echo -e  "               ${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
 echo -e  "               ${tyblue}|                DARI SAYA                 |${NC}"
 echo -e  "               ${tyblue}|            BY TARAP KUHING               |${NC}"
-echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT WA           |${NC}"
+echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT SAJA         |${NC}"
 echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
 echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
