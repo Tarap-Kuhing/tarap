@@ -84,7 +84,7 @@ echo -e "$COLOR1 ${NC}"
 read -rp "Masukan Domain/Host : " -e host
 echo ""
 if [ -z $host ]; then
-else
+echo ""
 echo "IP=$host" > /var/lib/ipvps.conf
 certv2ray
 fi
