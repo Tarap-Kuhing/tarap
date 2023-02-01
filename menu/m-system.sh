@@ -37,7 +37,7 @@ echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SYSTEM MENU •         
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}PANEL DOMAIN   ${WH}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}WEBMIN MENU ${WH}        $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}CHANGE DOMAIN   ${WH}  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}WEBMIN MENU ${WH}        $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}02${WH}]${NC} ${COLOR1}• ${WH}SPEEDTEST   ${WH}     ${WH}[${COLOR1}08${WH}]${NC} ${COLOR1}• ${WH}LIMIT SPEED SERVER ${WH} $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
@@ -54,7 +54,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
 case $opt in
-01 |1) clear ; m-domain ; exit ;;
+01 |1) clear ; add-host ; exit ;;
 02 |2) clear ; speedtest ; exit ;;
 03 |3) clear ; auto-reboot ; exit ;;
 04 |4) clear ; restart ; exit ;;
