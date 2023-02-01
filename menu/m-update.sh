@@ -42,7 +42,6 @@ rm -rf m-sshovpn
 rm -rf m-ssws
 rm -rf m-webmin
 rm -rf running
-rm -rf m-domain
 rm -rf bw
 rm -rf m-tcp
 rm -rf auto-reboot
@@ -63,7 +62,6 @@ rm -rf m-sshovpn
 rm -rf m-ssws
 rm -rf m-webmin
 rm -rf running
-rm -rf m-domain
 rm -rf bw
 rm -rf m-tcp
 rm -rf auto-reboot
@@ -83,7 +81,6 @@ wget -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap
 wget -O /usr/bin/m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
 wget -O /usr/bin/m-webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-webmin.sh" && chmod +x /usr/bin/m-webmin
 wget -O /usr/bin/running "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/running.sh" && chmod +x /usr/bin/running
-wget -O /usr/bin/m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-domain.sh" && chmod +x /usr/bin/m-domain
 wget -O /usr/bin/bw "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bw.sh" && chmod +x /usr/bin/bw
 wget -O /usr/bin/m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tcp.sh" && chmod +x /usr/bin/m-tcp
 wget -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/auto-reboot.sh" && chmod +x /usr/bin/auto-reboot
@@ -104,7 +101,6 @@ chmod +x m-sshovpn
 chmod +x m-ssws
 chmod +x m-webmin
 chmod +x running
-chmod +x m-domain
 chmod +x bw
 chmod +x m-tcp
 chmod +x auto-reboot
