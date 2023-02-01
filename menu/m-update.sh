@@ -168,16 +168,16 @@ wget -O /usr/bin/renew "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/mai
 wget -O /usr/bin/add-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vmess.sh" && chmod +x /usr/bin/add-vmess
 wget -O /usr/bin/add-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
 wget -O /usr/bin/add-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
-wget -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-ssws.sh" && chmod +x /usr/bin/add-ssws
+wget -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
 wget -O /usr/bin/trialvmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialvmess.sh" && chmod +x /usr/bin/trialvmess
 wget -O /usr/bin/trialvless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialvless.sh" && chmod +x /usr/bin/trialvless
 wget -O /usr/bin/trialtrojan "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialtrojan.sh" && chmod +x /usr/bin/trialtrojan
 wget -O /usr/bin/trialssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialssws.sh" && chmod +x /usr/bin/trialssws
 wget -O /usr/bin/renew-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-vmess.sh" && chmod +x /usr/bin/renew-vmess
 wget -O /usr/bin/renew-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-vless.sh" && chmod +x /usr/bin/renew-vless
-wget -O /usr/bin/renew-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/renew-tr.sh" && chmod +x /usr/binrenew-tr
+wget -O /usr/bin/renew-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-tr.sh" && chmod +x /usr/binrenew-tr
 wget -O /usr/bin/renew-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-ssws.sh" && chmod +x /usr/bin/renew-ssws
-wget -O /usr/bin/del-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xraydel-vmess.sh" && chmod +x /usr/bin/del-vmess
+wget -O /usr/bin/del-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-vmess.sh" && chmod +x /usr/bin/del-vmess
 wget -O /usr/bin/del-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-vless.sh" && chmod +x /usr/bindel-vless
 wget -O /usr/bin/del-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-tr.sh" && chmod +x /usr/bin/del-tr
 wget -O /usr/bin/del-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-ssws.sh" && chmod +x /usr/bin/del-ssws
@@ -227,7 +227,7 @@ chmod +x renew-vmess
 chmod +x renew-vless
 chmod +x renew-tr
 chmod +x renew-ssws
-chmod +x del-vmes
+chmod +x del-vmess
 chmod +x del-vless
 chmod +x del-tr
 chmod +x del-ssws
