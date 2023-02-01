@@ -218,7 +218,16 @@ echo -e " $COLOR1 $NC                                              ${NC} $COLOR1
 echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1}ON${WH}]   ${WH}[${COLOR1}10${WH}]${NC} ${COLOR1}• ${WH}CLEAR RAM CACHE    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+if [ "$Isadmin" = "ON" ]; then
+echo -e "  ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}REG IP  ${WH}[${COLOR1}Menu${WH}] ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}SET BOT  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
+ressee="menu-ip"
+bottt="menu-bot"
+else
+ressee="menu"
+bottt="menu"
+fi
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 myver="$(cat /opt/.ver)"
 
 if [[ $serverV > $myver ]]; then
