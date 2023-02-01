@@ -80,7 +80,7 @@ echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• KALAU ADA KENDALA  •    
 echo -e "$COLOR1 ${NC} ${COLBG1}             ${WH}• CHAT SAYA LEWAT WA •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}          ${WH}• https:/wa.me/085754292950 •          ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
-echo -e "$COLOR1 ${NC}
+echo -e "$COLOR1 ${NC}"
 read -rp "Masukan Domain/Host" -e host
 echo ""
 if [ -z $host ]; then
