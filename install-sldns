@@ -1,6 +1,4 @@
 #!/bin/bash
-# Script  By SL
-# 2022 SLOWDNS
 # ===============================================
 apt update -y
 apt install -y python3 python3-dnslib net-tools
