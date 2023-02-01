@@ -73,7 +73,7 @@ cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 domainlama=`cat /etc/xray/domain`
 else
-domainlama=`cat /etc/v2ray/domain`
+domainlama=`cat /etc/xray/domain`
 fi
 
 clear
