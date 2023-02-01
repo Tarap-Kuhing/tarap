@@ -85,9 +85,10 @@ if [ -z $dns ]; then
 echo -e "  [INFO] Type Your Domain/sub domain"
 echo -e " $COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo ""
+read -n 1 -s -r -p "  Press any key to back on menu"
+menu
+else
 echo "IP=$dns" > /var/lib/ipvps.conf
-rm -rf /etc/xray/domain
-echo $dns > /etc/xray/domain
 echo ""
 echo "  [INFO] Dont forget to renew cert"
 echo ""
