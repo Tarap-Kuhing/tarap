@@ -516,6 +516,7 @@ wget -O add-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray
 wget -O trialssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialssws.sh" && chmod +x trialssws
 wget -O del-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-ssws.sh" && chmod +x renew-ssws
+wget -O cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-ssws.sh" && chmod +x cek-ssws
 
 
 sleep 0.5
