@@ -32,6 +32,26 @@ echo -e "\E[44;1;39m              ⇱ UPDATE ⇲                      \E[0m"
 echo -e "\E[44;1;39m              ⇱ DIMULAI ⇲                     \E[0m"
 echo -e "\033[0;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[m"
 clear
+#hapus menu
+rm -rf menu
+rm -rf m-vmess
+rm -rf m-vless
+rm -rf m-trojan
+rm -rf m-system
+rm -rf m-sshovpn
+rm -rf m-ssws
+rm -rf m-webmin
+rm -rf running
+rm -rf m-domain
+rm -rf bw
+rm -rf m-tcp
+rm -rf auto-reboot
+rm -rf clearcache
+rm -rf restart
+rm -rf backup
+rm -rf autobackup
+rm -rf limitspeed
+rm -rf m-theme
 # download menu
 cd /usr/bin
 rm -rf menu
