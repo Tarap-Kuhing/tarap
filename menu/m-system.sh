@@ -50,7 +50,7 @@ echo -e " $COLOR1 $NC                                              ${NC} $COLOR1
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}SET BANNER ${WH}         $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}IP ${WH}              ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}         $COLOR1 $NC"
-echo -e " $COLOR1 $NC
+echo -e "$COLOR1 ${NC}"
 echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                      $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
