@@ -158,7 +158,7 @@ sleep 2
 sleep 5
 rm /root/install_up.sh
 rm /opt/.ver
-version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/versi)
+version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/versi )
 echo "$version_up" > /opt/.ver
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -180,7 +180,7 @@ upminutes=`uptime -p | awk '{print $4,$5}' | cut -d , -f1`
 uptimecek=`uptime -p | awk '{print $6,$7}' | cut -d , -f1`
 cekup=`uptime -p | grep -ow "day"`
 IPVPS=$(curl -s ipinfo.io/ip )
-serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/versi)
+serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/versi )
 if [ "$Isadmin" = "ON" ]; then
 uis="${COLOR1}Premium User$NC"
 else
