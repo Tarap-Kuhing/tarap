@@ -166,7 +166,7 @@ echo -e ""
 echo -e "$COLOR1━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━$NC"
 echo -e ""
 read -n 1 -s -r -p " Tekan tombol apa saja untuk kembali ke menu"
-menu-bot
+m-bot
 }
 }
 clear
@@ -186,5 +186,5 @@ case $opt in
 02 | 2) clear ; menu2 ;;
 03 | 3) clear ; menu3 ;;
 00 | 0) clear ; menu ;;
-*) clear ; menu-bot ;;
+*) clear ; m-bot ;;
 esac
