@@ -203,7 +203,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday        Month   ${NC}"
 echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv    $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
-echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv     $month_rx $month_rxv   ${NC}"
+echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v    $yesterday $yesterday_v      $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
