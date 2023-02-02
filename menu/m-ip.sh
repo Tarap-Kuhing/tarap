@@ -34,7 +34,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 fi
 
 read -p " Username : " USERNAME1
