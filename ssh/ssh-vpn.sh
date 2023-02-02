@@ -365,7 +365,7 @@ wget -O webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/we
 
 # menu system
 wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh"
-wget -O m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-domain.sh"
+#wget -O m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-domain.sh"
 wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh"
 #wget -O port-change "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-change.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh"
@@ -415,7 +415,7 @@ chmod +x issue
 chmod +x webmin
 
 chmod +x m-system
-chmod +x m-domain
+#chmod +x m-domain
 chmod +x add-host
 #chmod +x port-change
 chmod +x certv2ray
