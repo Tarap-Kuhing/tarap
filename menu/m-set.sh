@@ -69,7 +69,6 @@ else
 red "Permission Denied!"
 exit 0
 fi
-function status(){
 clear
 cek=$(service ssh status | grep active | cut -d ' ' -f5)
 if [ "$cek" = "active" ]; then
