@@ -88,7 +88,6 @@ rm -rf m-ip
 rm -rf m-dns
 rm -rf m-bot
 rm -rf update
-
 # download menu
 cd /usr/bin
 rm -rf menu
