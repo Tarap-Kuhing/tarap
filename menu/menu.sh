@@ -152,7 +152,7 @@ echo -e "$COLOR1└────────────────────�
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Check for Script updates"
 sleep 2
-wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarong/main/tarong/PLUGINS/install-up.sh" && chmod +x /root/install_up.sh
+wget -q -O /root/install_up.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/install-up.sh" && chmod +x /root/install_up.sh
 sleep 2
 ./install_up.sh
 sleep 5
@@ -219,10 +219,13 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• BOT ADMIN MENU •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 if [ "$Isadmin" = "ON" ]; then
-echo -e "  ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}REG IP  ${WH}[${COLOR1}Menu${WH}] ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}SET BOT  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
-ressee="menu-ip"
-bottt="menu-bot"
+echo -e "  ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}REG IP  ${WH}[${COLOR1}Menu${WH}] ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}SET BOT  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
+ressee="m-ip"
+bottt="m-bot"
 else
 ressee="menu"
 bottt="menu"
