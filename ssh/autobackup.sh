@@ -66,27 +66,6 @@ cat <<EOF>>/home/email
 $email
 EOF
 }
-function gantipengirim() {
-echo "Please enter your email"
-read -rp "Email : " -e email
-echo "Please enter your Password email"
-read -rp "Password : " -e pwdd
-rm -rf /etc/msmtprc
-cat<<EOF>>/etc/msmtprc
-defaults
-tls on
-tls_starttls on
-tls_trust_file /etc/ssl/certs/ca-certificates.crt
-account default
-host smtp.gmail.com
-port 587
-auth on
-user $email
-from $email
-password $pwdd
-logfile ~/.msmtp.log
-EOF
-}
 function testemail() {
 email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
