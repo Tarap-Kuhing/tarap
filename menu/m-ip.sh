@@ -30,7 +30,7 @@ if [ -z $EMAIL1 ]; then
 echo -e "$COLOR1 ${NC}   [INFO] Please Input Your Github Email Adress"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• 𝔻ℝ𝕐𝔸ℕℤ 𝕊ℂℝ𝕀ℙ𝕋 •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
@@ -58,7 +58,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "  Press any key to back on menu"
-menu-ip
+m-ip
 fi
 
 sleep 2
@@ -82,7 +82,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 }
 
 function viewapi(){
@@ -102,7 +102,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 }
 
 function add_ip(){
@@ -125,7 +125,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 else
 echo -e "$COLOR1 ${NC}  [INFO] OK! IP VPS is not Registered!"
 echo -e "$COLOR1 ${NC}  [INFO] Lets Regester it!"
@@ -146,7 +146,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 fi
 
 
@@ -160,7 +160,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 fi
 
 x="ok"
@@ -301,7 +301,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 }
 
 function renewipvps(){
@@ -334,7 +334,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -367,7 +367,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 fi
 done
 echo -e ""
@@ -424,7 +424,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 }
 
 function useripvps(){
@@ -451,7 +451,7 @@ cd
 rm -rf /root/permission
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip
+m-ip
 }
 function resetipvps(){
 clear
@@ -471,9 +471,9 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip  
+m-ip  
 }
-Isadmin=$(curl -sS https://raw.githubusercontent.com/kenDevXD/permission/main/ipmini | grep $MYIP | awk '{print $5}')
+Isadmin=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/permission/main/ipmini | grep $MYIP | awk '{print $5}')
 if [ "$Isadmin" = "OFF" ]; then
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -489,7 +489,7 @@ echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}            
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 read -n 1 -s -r -p "   Press any key to back on menu"
-menu-ip  
+m-ip  
 fi
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
@@ -534,7 +534,7 @@ ISON="RESET API"
 ressee="resetipvps"
 else
 ISON=""
-ressee="menu-ip"
+ressee="m-ip"
 fi
 echo -e "   $COLOR1 [01]$NC • $APIOK        $COLOR1 [04]$NC • RENEW IPVPS" 
 echo -e "   $COLOR1 [02]$NC • ADD IPVPS      $COLOR1 [05]$NC • LIST IPVPS"
@@ -544,7 +544,7 @@ echo -e "   $COLOR1 [00]$NC • GO BACK"
 
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHINH •${NC}                 $COLOR1 $NC"
+echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" 
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -556,5 +556,5 @@ case $opt in
 05 | 5) clear ; useripvps ;;
 06 | 6) clear ; $ressee ;;
 00 | 0) clear ; menu ;;
-*) clear ; menu-ip ;;
+*) clear ; m-ip ;;
 esac
