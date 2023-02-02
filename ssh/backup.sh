@@ -1,35 +1,42 @@
 #!/bin/bash
-# Mod By TARAP KUHING
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
+#IZIN SCRIPT
+MYIP=$(curl -sS ipv4.icanhazip.com)
+echo -e "\e[32mloading...\e[0m"
 clear
-IP=$(wget -qO- ipinfo.io/ip);
+# Valid Script
+VALIDITY () {
+    today=`date -d "0 days" +"%Y-%m-%d"`
+    Exp1=$(curl https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $4}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
+    else
+    echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m";
+    echo -e "\e[31mPlease renew your ipvps first\e[0m"
+    exit 0
+fi
+}
+IZIN=$(curl https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $5}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+VALIDITY
+else
+echo -e "\e[31mPermission Denied!\e[0m";
+echo -e "\e[31mPlease buy script first\e[0m"
+exit 0
+fi
+echo -e "\e[32mloading...\e[0m"
+clear
+IP=$(wget -qO- icanhazip.com);
 date=$(date +"%Y-%m-%d")
 clear
-email=$(cat /home/email)
-if [[ "$email" = "" ]]; then
-echo "Masukkan Email Untuk Menerima Backup"
-read -rp "Email : " -e email
-cat <<EOF>>/home/email
-$email
-EOF
-fi
-clear
-echo "Mohon Menunggu , Proses Backup sedang berlangsung !!"
-rm -rf /root/backup
+echo " Enter Your Email To Receive Message"
+read -rp " Email: " -e email
+sleep 1
+echo Directory Created
 mkdir /root/backup
 sleep 1
-
+echo Start Backup
+clear
 cp -r /root/.acme.sh /root/backup/ &> /dev/null
 cp /etc/passwd /root/backup/ &> /dev/null
 cp /etc/group /root/backup/ &> /dev/null
@@ -54,7 +61,7 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "
+echo -e ""
 Detail Backup
 ==================================
 IP VPS        : $IP
@@ -72,5 +79,10 @@ IP VPS        : $IP
 Link Backup   : $link
 Tanggal       : $date
 ==================================
-"
-echo "Silahkan cek Kotak Masuk $email"
+echo -e ""
+If you want to restore data, please enter the link above.
+Thank You For Using Our Services" | mail -s "Backup Data" $email
+rm -rf /root/backup
+rm -r /root/$IP-$date.zip
+echo "Done"
+echo "Please Check Your Email"
