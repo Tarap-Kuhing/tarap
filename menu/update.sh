@@ -59,5 +59,6 @@ wget -q -O /usr/bin/cek-vless "https://raw.githubusercontent.com/Tarap-Kuhing/ta
 wget -q -O /usr/bin/cek-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-tr.sh" && chmod +x /usr/bin/cek-tr
 wget -q -O /usr/bin/cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/cek-ssws.sh" && chmod +x /usr/bin/cek-ssws
 wget -q -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
+echo -e " [INFO] Update Successfully"
 sleep 2
 exit
