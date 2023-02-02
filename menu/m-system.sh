@@ -49,6 +49,8 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}SET BANNER ${WH}         $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}IP ${WH}              ${WH}[${COLOR1}11${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}         $COLOR1 $NC"
+echo -e " $COLOR1 $NC
 echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK${NC}                                                                                $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
@@ -60,12 +62,14 @@ case $opt in
 04 |4) clear ; restart ; exit ;;
 05 |5) clear ; bw ; exit ;;
 06 |6) clear ; m-tcp ; exit ;;
-07 |7) clear ; webmin ; exit ;;
-08 |8) clear ; limitspeed ; exit ;;
-09 |9) clear ; autobackup ; exit ;;
-10 |10) clear ; backup ; exit ;;
-11 |11) clear ; restore ; exit ;;
-12 |12) clear ; nano /etc/issue.net ;;
+07 |7) clear ; m-ip ; exit ;;
+08 |8) clear ; webmin ; exit ;;
+09 |9) clear ; limitspeed ; exit ;;
+10 |10) clear ; autobackup ; exit ;;
+11 |11) clear ; backup ; exit ;;
+12 |12) clear ; restore ; exit ;;
+13 |13) clear ; nano /etc/issue.net ;;
+14 |14) clear ; m-dns ; exit ;;
 00 |0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
 esac
