@@ -113,28 +113,28 @@ fi
 
 db=$(service dropbear status | grep active | cut -d ' ' $stat)
 if [ "$db" = "active" ]; then
-resdb="${WH}ONLINE${NC}"
+rews2="${WH}ONLINE${NC}"
 else
-resdb="${red}OFFLINE${NC}"
+rews2="${red}OFFLINE${NC}"
 fi
  
 v2r=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$v2r" = "active" ]; then
-resv2r="${WH}ONLINE${NC}"
+resnx="${WH}ONLINE${NC}"
 else
-resv2r="${red}OFFLINE${NC}"
+resnx="${red}OFFLINE${NC}"
 fi
 vles=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$vles" = "active" ]; then
-resvles="${WH}ONLINE${NC}"
+resnx="${WH}ONLINE${NC}"
 else
-resvles="${red}OFFLINE${NC}"
+resnx="${red}OFFLINE${NC}"
 fi
 trj=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$trj" = "active" ]; then
-restr="${WH}ONLINE${NC}"
+resnx="${WH}ONLINE${NC}"
 else
-restr="${red}OFFLINE${NC}"
+resnx="${red}OFFLINE${NC}"
 fi
 
 tcp="$(systemctl show --now openvpn-server@server-tcp-1194 --no-page)"
