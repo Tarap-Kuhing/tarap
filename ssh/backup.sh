@@ -1,4 +1,4 @@
-#By TARAP KUHING
+#!/bin/bash
 #IZIN SCRIPT
 MYIP=$(curl -sS ipv4.icanhazip.com)
 echo -e "\e[32mloading...\e[0m"
@@ -33,6 +33,7 @@ echo " Enter Your Email To Receive Message"
 read -rp " Email: " -e email
 sleep 1
 echo Directory Created
+rm -rf /root/backup
 mkdir /root/backup
 sleep 1
 echo Start Backup
@@ -42,15 +43,11 @@ cp /etc/passwd /root/backup/ &> /dev/null
 cp /etc/group /root/backup/ &> /dev/null
 cp /etc/shadow /root/backup/ &> /dev/null
 cp /etc/gshadow /root/backup/ &> /dev/null
-cp -r /etc/wireguard /root/backup/wireguard &> /dev/null
 cp /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
-cp /etc/ipsec.d/passwd /root/backup/passwd1 &> /dev/null
 cp /etc/shadowsocks-libev/akun.conf /root/backup/ss.conf &> /dev/null
 cp -r /var/lib /root/backup &> /dev/null
-cp -r /home/sstp /root/backup/sstp &> /dev/null
 cp -r /etc/v2ray /root/backup/v2ray &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
-cp -r /etc/trojan-go /root/backup/trojan-go &> /dev/null
 cp -r /usr/local/shadowsocksr/ /root/backup/shadowsocksr &> /dev/null
 cp -r /home/vps/public_html /root/backup/public_html &> /dev/null
 cp -r /etc/cron.d /root/backup/cron.d &> /dev/null
