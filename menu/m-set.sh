@@ -69,133 +69,215 @@ else
 red "Permission Denied!"
 exit 0
 fi
+
+# CHEK STATUS
+openvpn_service="$(systemctl show openvpn.service --no-page)"
+oovpn=$(echo "${openvpn_service}" | grep 'ActiveState=' | cut -f2 -d=)
+status_openvp=$(/etc/init.d/openvpn status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#status_ss_tls="$(systemctl show shadowsocks-libev-server@tls.service --no-page)"
+#ss_tls=$(echo "${status_ss_tls}" | grep 'ActiveState=' | cut -f2 -d=)
+#sst_status=$(systemctl status shadowsocks-libev-server@tls | grep Active | awk '{print $0}' | cut -d "(" -f2 | cut -d ")" -f1)
+#ssh_status=$(systemctl status shadowsocks-libev-server@http | grep Active | awk '{print $0}' | cut -d "(" -f2 | cut -d ")" -f1)
+#status_ss_http="$(systemctl show shadowsocks-libev-server@http.service --no-page)"
+#ss_http=$(echo "${status_ss_http}" | grep 'ActiveState=' | cut -f2 -d=)
+#sssohtt=$(systemctl status shadowsocks-libev-server@*-http | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#status="$(systemctl show shadowsocks-libev.service --no-page)"
+#status_text=$(echo "${status}" | grep 'ActiveState=' | cut -f2 -d=)
+tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless_tls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vless_nontls_v2ray_status=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+shadowsocks=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#ssr_status=$(systemctl status ssrmu | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+trojan_server=$(systemctl status xray | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+dropbear_status=$(/etc/init.d/dropbear status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+stunnel_service=$(/etc/init.d/stunnel4 status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#sstp_service=$(systemctl status accel-ppp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#squid_service=$(/etc/init.d/squid status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ssh_service=$(/etc/init.d/ssh status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+vnstat_service=$(/etc/init.d/vnstat status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+cron_service=$(/etc/init.d/cron status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+fail2ban_service=$(/etc/init.d/fail2ban status | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+#wg="$(systemctl show wg-quick@wg0.service --no-page)"
+#swg=$(echo "${wg}" | grep 'ActiveState=' | cut -f2 -d=)
+#trgo="$(systemctl show trojan-go.service --no-page)"
+#strgo=$(echo "${trgo}" | grep 'ActiveState=' | cut -f2 -d=)
+#sswg=$(systemctl status wg-quick@wg0 | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wstls=$(systemctl status ws-stunnel.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsdrop=$(systemctl status ws-dropbear.service | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsovpn=$(systemctl status ws-ovpn | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+wsopen=$(systemctl status ws-openssh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+osslh=$(systemctl status sslh | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohp=$(systemctl status dropbear-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohq=$(systemctl status openvpn-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+ohr=$(systemctl status ssh-ohp | grep Active | awk '{print $3}' | cut -d "(" -f2 | cut -d ")" -f1)
+
+# COLOR VALIDATION
+RED='\033[0;31m'
+NC='\033[0m'
+GREEN='\033[0;32m'
+ORANGE='\033[0;33m'
+BLUE='\033[0;34m'
+PURPLE='\033[0;35m'
+CYAN='\033[0;36m'
+LIGHT='\033[0;37m'
 clear
-cek=$(service ssh status | grep active | cut -d ' ' -f5)
-if [ "$cek" = "active" ]; then
-stat=-f5
+
+# STATUS SERVICE OPENVPN
+if [[ $oovpn == "active" ]]; then
+  status_openvpn=" ${GREEN}Running ${NC}( No Error )"
 else
-stat=-f7
-fi
-cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
-if [ "$cekray" = "XRAY" ]; then
-rekk='xray'
-becek='XRAY'
+  status_openvpn="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-ssh=$(service ssh status | grep active | cut -d ' ' $stat)
-if [ "$ssh" = "active" ]; then
-ressh="${WH}ONLINE${NC}"
+# STATUS SERVICE  SSH
+if [[ $ssh_service == "running" ]]; then
+   status_ssh=" ${GREEN}Running ${NC}( No Error )"
 else
-ressh="${red}OFFLINE${NC}"
-fi
-sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
-if [ "$sshstunel" = "active" ]; then
-resst="${WH}ONLINE${NC}"
-else
-resst="${red}OFFLINE${NC}"
-fi
-sshws=$(service ws-dropbear status | grep active | cut -d ' ' $stat)
-if [ "$sshws" = "active" ]; then
-rews="${WH}ONLINE${NC}"
-else
-rews="${red}OFFLINE${NC}"
+   status_ssh="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-sshws2=$(service ws-stunnel status | grep active | cut -d ' ' $stat)
-if [ "$sshws2" = "active" ]; then
-rews2="${WH}ONLINE${NC}"
+# STATUS SERVICE  SQUID
+if [[ $squid_service == "running" ]]; then
+   status_squid=" ${GREEN}Running ${NC}( No Error )"
 else
-rews2="${red}OFFLINE${NC}"
+   status_squid="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-db=$(service dropbear status | grep active | cut -d ' ' $stat)
-if [ "$db" = "active" ]; then
-redb="${WH}ONLINE${NC}"
+# STATUS SERVICE  VNSTAT
+if [[ $vnstat_service == "running" ]]; then
+   status_vnstat=" ${GREEN}Running ${NC}( No Error )"
 else
-resdb="${red}OFFLINE${NC}"
+   status_vnstat="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-v2r=$(service $rekk status | grep active | cut -d ' ' $stat)
-if [ "$v2r" = "active" ]; then
-rev2r="${WH}ONLINE${NC}"
+# STATUS SERVICE  CRONS
+if [[ $cron_service == "running" ]]; then
+   status_cron=" ${GREEN}Running ${NC}( No Error )"
 else
-resv2r="${red}OFFLINE${NC}"
-fi
-vles=$(service $rekk status | grep active | cut -d ' ' $stat)
-if [ "$vles" = "active" ]; then
-revles="${WH}ONLINE${NC}"
-else
-resvles="${red}OFFLINE${NC}"
-fi
-trj=$(service $rekk status | grep active | cut -d ' ' $stat)
-if [ "$trj" = "active" ]; then
-retr="${WH}ONLINE${NC}"
-else
-restr="${red}OFFLINE${NC}"
+   status_cron="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-tcp="$(systemctl show --now openvpn-server@server-tcp-1194 --no-page)"
-status1=$(echo "${tcp}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status1}" = "active" ]; then
-ovpntcp="${WH}ONLINE${NC}"
+# STATUS SERVICE  FAIL2BAN
+if [[ $fail2ban_service == "running" ]]; then
+   status_fail2ban=" ${GREEN}Running ${NC}( No Error )"
 else
-ovpntcp="${red}OFFLINE${NC}"
+   status_fail2ban="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-udp="$(systemctl show --now openvpn-server@server-udp-2200 --no-page)"
-status2=$(echo "${udp}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status2}" = "active" ]; then
-ovpnudp="${WH}ONLINE${NC}"
+# STATUS SERVICE  TLS
+if [[ $tls_v2ray_status == "running" ]]; then
+   status_tls_v2ray=" ${GREEN}Running${NC} ( No Error )"
 else
-ovpnudp="${red}OFFLINE${NC}"
+   status_tls_v2ray="${RED}  Not Running${NC}   ( Error )"
 fi
 
-ovhp="$(systemctl show ohp.service --no-page)"
-status3=$(echo "${ovhp}" | grep 'ActiveState=' | cut -f2 -d=)
-if [ "${status3}" = "active" ]; then
-ohp="${WH}ONLINE${NC}"
+# STATUS SERVICE NON TLS V2RAY
+if [[ $nontls_v2ray_status == "running" ]]; then
+   status_nontls_v2ray=" ${GREEN}Running ${NC}( No Error )${NC}"
 else
-ohp="${red}OFFLINE${NC}"
+   status_nontls_v2ray="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-ningx=$(service nginx status | grep active | cut -d ' ' $stat)
-if [ "$ningx" = "active" ]; then
-resnx="${WH}ONLINE${NC}"
+# STATUS SERVICE VLESS HTTPS
+if [[ $vless_tls_v2ray_status == "running" ]]; then
+  status_tls_vless=" ${GREEN}Running${NC} ( No Error )"
 else
-resnx="${red}OFFLINE${NC}"
+  status_tls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-squid=$(service squid status | grep active | cut -d ' ' $stat)
-if [ "$squid" = "active" ]; then
-ressq="${WH}ONLINE${NC}"
+# STATUS SERVICE VLESS HTTP
+if [[ $vless_nontls_v2ray_status == "running" ]]; then
+  status_nontls_vless=" ${GREEN}Running${NC} ( No Error )"
 else
-ressq="${red}OFFLINE${NC}"
+  status_nontls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+# STATUS SERVICE TROJAN
+if [[ $trojan_server == "running" ]]; then
+   status_virus_trojan=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   status_virus_trojan="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+# STATUS SERVICE DROPBEAR
+if [[ $dropbear_status == "running" ]]; then
+   status_beruangjatuh=" ${GREEN}Running${NC} ( No Error )${NC}"
+else
+   status_beruangjatuh="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 
-sslh=$(service sslh status | grep active | cut -d ' ' $stat)
-if [ "$sslh" = "active" ]; then
-sslh="${WH}ONLINE${NC}"
+# STATUS SERVICE STUNNEL
+if [[ $stunnel_service == "running" ]]; then
+   status_stunnel=" ${GREEN}Running ${NC}( No Error )"
 else
-sslh="${red}OFFLINE${NC}"
+   status_stunnel="${RED}  Not Running ${NC}  ( Error )}"
+fi
+# STATUS SERVICE WEBSOCKET TLS
+if [[ $wstls == "running" ]]; then
+   swstls=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   swstls="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS SERVICE WEBSOCKET DROPBEAR
+if [[ $wsdrop == "running" ]]; then
+   swsdrop=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   swsdrop="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS SERVICE SSLH / SSH
+if [[ $osslh == "running" ]]; then 
+   sosslh=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sosslh="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP DROPBEAR
+if [[ $ohp == "running" ]]; then 
+   sohp=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohp="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP OpenVPN
+if [[ $ohq == "running" ]]; then 
+   sohq=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohq="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS OHP SSH
+if [[ $ohr == "running" ]]; then 
+   sohr=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   sohr="${RED}  Not Running ${NC}  ( Error )${NC}"
+fi
+
+# STATUS SHADOWSOCKS
+if [[ $shadowsocks == "running" ]]; then
+   status_shadowsocks=" ${GREEN}Running ${NC}( No Error )${NC}"
+else
+   status_shadowsocks="${RED}  Not Running ${NC}  ( Error )${NC}"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SERVER STATUS •               ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e " $COLOR1┌───────────────────────────────────────────────┐${NC}"
-echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}SSH & OVPN                        ${COLOR1}• $ressh"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}SSH                        ${COLOR1}• $ressh"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}OVPN                        ${COLOR1}• $ressh"
 #echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}OVPN TCP                         ${COLOR1}• $ovpntcp"
 #echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}OVPN UDP                         ${COLOR1}• $ovpnudp"
 #echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}OVPN OHP                         ${COLOR1}• $ohp"
 #echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}SQUID                            ${COLOR1}• $ressq"
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}DROPBEAR                         ${COLOR1}• $resdb"
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}NGINX                            ${COLOR1}• $resnx"
-echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}WS DROPBEAR                      ${COLOR1}• $rews"
-echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}WS STUNNEL                       ${COLOR1}• $rews2"
-echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}STUNNEL                          ${COLOR1}• $resst"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}WS DROPBEAR                      ${COLOR1}• $wsdrop"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}WS STUNNEL                       ${COLOR1}• $wstls"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}STUNNEL                          ${COLOR1}• $stunnel_service
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}XRAY-SS                          ${COLOR1}• $resv2r"
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}XRAY                             ${COLOR1}• $resv2r"
 echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}VLESS                            ${COLOR1}• $resvles"
-echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}TROJAN                           ${COLOR1}• $restr"
+echo -e " $COLOR1 ${NC}  ${COLOR1}• ${WH}TROJAN                           ${COLOR1}• $trojan_server"
 echo -e " $COLOR1└───────────────────────────────────────────────┘${NC}" 
 echo -e "$COLOR1┌────────────────────── ${WH}BY${NC} ${COLOR1}───────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC}                ${WH}• TARAP KUHING •${NC}                 $COLOR1 $NC"
