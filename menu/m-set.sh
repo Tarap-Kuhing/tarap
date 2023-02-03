@@ -80,9 +80,6 @@ cekray=`cat /root/log-install.txt | grep -ow "XRAY" | sort | uniq`
 if [ "$cekray" = "XRAY" ]; then
 rekk='xray'
 becek='XRAY'
-else
-rekk='v2ray'
-becek='V2RAY'
 fi
 
 ssh=$(service ssh status | grep active | cut -d ' ' $stat)
@@ -113,28 +110,28 @@ fi
 
 db=$(service dropbear status | grep active | cut -d ' ' $stat)
 if [ "$db" = "active" ]; then
-rews2="${WH}ONLINE${NC}"
+redb="${WH}ONLINE${NC}"
 else
-rews2="${red}OFFLINE${NC}"
+resdb="${red}OFFLINE${NC}"
 fi
- 
+
 v2r=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$v2r" = "active" ]; then
-resnx="${WH}ONLINE${NC}"
+rev2r="${WH}ONLINE${NC}"
 else
-resnx="${red}OFFLINE${NC}"
+resv2r="${red}OFFLINE${NC}"
 fi
 vles=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$vles" = "active" ]; then
-resnx="${WH}ONLINE${NC}"
+revles="${WH}ONLINE${NC}"
 else
-resnx="${red}OFFLINE${NC}"
+resvles="${red}OFFLINE${NC}"
 fi
 trj=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$trj" = "active" ]; then
-resnx="${WH}ONLINE${NC}"
+retr="${WH}ONLINE${NC}"
 else
-resnx="${red}OFFLINE${NC}"
+restr="${red}OFFLINE${NC}"
 fi
 
 tcp="$(systemctl show --now openvpn-server@server-tcp-1194 --no-page)"
@@ -173,6 +170,13 @@ if [ "$squid" = "active" ]; then
 ressq="${WH}ONLINE${NC}"
 else
 ressq="${red}OFFLINE${NC}"
+fi
+
+sslh=$(service sslh status | grep active | cut -d ' ' $stat)
+if [ "$sslh" = "active" ]; then
+sslh="${WH}ONLINE${NC}"
+else
+sslh="${red}OFFLINE${NC}"
 fi
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• SERVER STATUS •               ${NC} $COLOR1 $NC"
