@@ -51,7 +51,7 @@ echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} 
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}IP         ${WH}      ${WH}[${COLOR1}14${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}         $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}"
-echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK    ${WH}      ${WH}[${COLOR1}15${WH}]${NC} ${COLOR1}• ${WH}SET ${WH}         $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}00${WH}]${NC} ${COLOR1}• ${WH}GO BACK $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e ""
 echo -ne " ${WH}Select menu ${COLOR1}: ${WH}"; read opt
@@ -70,7 +70,6 @@ case $opt in
 12 |12) clear ; restore ; exit ;;
 13 |13) clear ; nano /etc/issue.net ;;
 14 |14) clear ; m-dns ; exit ;;
-15 |15) clear ; m-set ; exit ;;
 00 |0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
 esac
