@@ -39,7 +39,6 @@ cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/ backup
 cp -r /home/sstp backup/sstp
 cp -r /etc/xray backup/xray
-cp -r /etc/v2ray backup/v2ray
 cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp -r /home/vps/public_html backup/public_html
@@ -49,8 +48,8 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e ""
-Detail Backup
+echo -e "
+Detail Backup 
 ==================================
 IP VPS        : $IP
 Link Backup   : $link
@@ -60,8 +59,8 @@ Tanggal       : $date
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 clear
-echo -e ""
-Detail Backup
+echo -e "
+Detail Backup 
 ==================================
 IP VPS        : $IP
 Link Backup   : $link
