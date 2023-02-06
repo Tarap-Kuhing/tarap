@@ -165,8 +165,8 @@ mkdir -p /etc/tarap/theme
 mkdir -p /var/lib/ >/dev/null 2>&1
 echo "IP=" >> /var/lib/ipvps.conf
 echo ""
-#wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
-#rm tools.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
+rm tools.sh
 clear
 echo -e  "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e  "               ${tyblue}|              TERIMA KASIH                |${NC}"
