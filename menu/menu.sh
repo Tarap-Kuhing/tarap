@@ -202,7 +202,7 @@ echo -e "$COLOR1 $NC ${WH}[ SSH WS : ${status_ws} ${WH}]  ${WH}[ XRAY : ${status
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${COLOR1}Traffic${NC}      ${COLOR1}Today       Yesterday       Month   ${NC}"
-echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv    $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
+echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv     $yesterday_tx $yesterday_txv      $month_tx $month_txv   ${NC}"
 echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv      $month_rx $month_rxv   ${NC}"
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v    $yesterday $yesterday_v      $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -219,7 +219,7 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• BOT ADMIN MENU •              ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}  ${WH}• Terima Kasih Sudah Mengguanakan Script Saya •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 if [ "$Isadmin" = "ON" ]; then
