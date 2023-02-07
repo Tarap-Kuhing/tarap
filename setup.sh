@@ -231,41 +231,42 @@ clear
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|      PROCESS INSTALLED SLOWDNS     |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap_Kuhing.sh && chmod +x Tarap_Kuhing.sh && ./Tarap-Kuhing.sh
+sleep 2
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap_Kuhing.sh && chmod +x Tarap_Kuhing.sh && ./Tarap-Kuhing.sh
 clear
 #install ssh ovpn
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-sleep 5
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/ssh-vpn.sh && chmod +x ssh-vpn.sh && ./ssh-vpn.sh
 #Install Xray
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|           PROCESS INSTALLED XRAY         |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-sleep 5
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 #Install SSH Websocket
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH    |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-sleep 5
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 #Install AUTOBACKUP
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|       PROCESS INSTALLED AUTOBACKUP       |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-sleep 5
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/set-br.sh && chmod +x set-br.sh && ./set-br.sh
 #Install OHP Websocket
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|           PROCESS INSTALLED OHP          |${NC}"
 echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
-sleep 5
+sleep 2
 clear
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 clear
