@@ -2,7 +2,7 @@
 # Script By Tarap Kuhing
 # 2022 SLOWDNS
 # ===============================================
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/slhost.sh && chmod +x slhost.sh && ./slhost.sh
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
 nameserver=$(cat /root/nsdomain)
 apt update -y
 apt install -y python3 python3-dnslib net-tools
