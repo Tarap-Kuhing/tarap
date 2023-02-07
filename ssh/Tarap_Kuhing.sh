@@ -3,8 +3,6 @@
 # 2022 SLOWDNS
 # ===============================================
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
-domen=$(cat /root/domain)
-nameserver=$(cat /root/nsdomain)
 #sl-fix
 cd /usr/bin
 wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix"
