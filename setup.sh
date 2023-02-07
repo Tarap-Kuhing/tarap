@@ -177,6 +177,7 @@ echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT SAJA         |${
 echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
 echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
+sleep 3
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
 #read -rp "Masukan domain kamu Disini : " -e dns
 #    if [ -z $dns ]; then
@@ -184,13 +185,13 @@ wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhi
 #       Nothing input for domain!
 #        Then a random domain will be created"
 #    else
-#        echo "$dns" > /root/scdomain
-	echo "$dns" > /etc/xray/scdomain
-	echo "$dns" > /etc/xray/domain
-	echo "$dns" > /etc/v2ray/domain
-	echo $dns > /root/domain
-        echo "IP=$dns" > /var/lib/ipvps.conf
-    fi
+#echo "$dns" > /root/scdomain
+#echo "$dns" > /etc/xray/scdomain
+#echo "$dns" > /etc/xray/domain
+#echo "$dns" > /etc/v2ray/domain
+#echo $dns > /root/domain
+#echo "IP=$dns" > /var/lib/ipvps.conf
+#    fi
 clear
 #THEME RED
 cat <<EOF>> /etc/tarap/theme/red
