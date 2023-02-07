@@ -84,8 +84,6 @@ touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
-touch /etc/xray/nsdomain
-touch /etc/v2ray/nsdomain
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
@@ -179,7 +177,7 @@ echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${
 echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
 sleep 3
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap_Kuhing.sh && chmod +x Tarap_Kuhing.sh && ./Tarap_Kuhing.sh
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
 #read -rp "Masukan domain kamu Disini : " -e dns
 #    if [ -z $dns ]; then
 #        echo -e "
