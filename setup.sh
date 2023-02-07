@@ -177,13 +177,14 @@ echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT SAJA         |${
 echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
 echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
-read -rp "Masukan domain kamu Disini : " -e dns
-    if [ -z $dns ]; then
-        echo -e "
-        Nothing input for domain!
-        Then a random domain will be created"
-    else
-        echo "$dns" > /root/scdomain
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
+#read -rp "Masukan domain kamu Disini : " -e dns
+#    if [ -z $dns ]; then
+#        echo -e "
+#       Nothing input for domain!
+#        Then a random domain will be created"
+#    else
+#        echo "$dns" > /root/scdomain
 	echo "$dns" > /etc/xray/scdomain
 	echo "$dns" > /etc/xray/domain
 	echo "$dns" > /etc/v2ray/domain
