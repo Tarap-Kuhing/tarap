@@ -13,8 +13,8 @@ rm sslh-fix-reboot
 cd /usr/bin
 wget -O sslh-fix-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sslh-fix-reboot.sh"
 wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh"
-wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh"
-wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh"
+#wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh"
+#wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh"
 
 cd /usr/bin
 chmod +x sslh-fix-reboot
