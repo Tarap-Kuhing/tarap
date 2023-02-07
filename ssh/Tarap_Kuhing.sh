@@ -5,25 +5,6 @@
 wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
 domen=$(cat /root/domain)
 nameserver=$(cat /root/nsdomain)
-apt update -y
-apt install -y python3 python3-dnslib net-tools
-apt install ncurses-utils -y
-apt install dnsutils -y
-apt install golang -y
-apt install git -y
-apt install curl -y
-apt install wget -y
-apt install ncurses-utils -y
-apt install screen -y
-apt install cron -y
-apt install iptables -y
-apt install -y git screen whois dropbear wget
-apt install -y pwgen python php jq curl
-apt install -y sudo gnutls-bin
-apt install -y mlocate dh-make libaudit-dev build-essential
-apt install -y dos2unix debconf-utils
-service cron reload
-service cron restart
 #sl-fix
 cd /usr/bin
 wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix"
