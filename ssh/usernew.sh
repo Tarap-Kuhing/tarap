@@ -75,7 +75,7 @@ domen=`cat /etc/xray/domain`
 else
 domen=`cat /etc/v2ray/domain`
 fi
-sldomain=$(cat /root/nsdomain)
+nameserver=$(cat /root/nsdomain)
 sldomain=`cat /root/nsdomain`
 slkey=`cat /etc/slowdns/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
@@ -147,6 +147,7 @@ echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/l
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$nameserver" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
