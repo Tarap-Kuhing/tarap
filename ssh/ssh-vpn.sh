@@ -384,9 +384,9 @@ wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tc
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/xp.sh"
 #wget -O asu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/asu.sh"
-wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix"
+#wget -O sl-fix "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sl-fix"
 
-chmod +x sl-fix
+#chmod +x sl-fix
 chmod +x menu
 #chmod +x m-port
 chmod +x m-vmess
