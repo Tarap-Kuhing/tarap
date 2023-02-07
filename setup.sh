@@ -227,7 +227,12 @@ EOF
 cat <<EOF>> /etc/tarap/theme/color.conf
 blue
 EOF
-
+clear
+echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "                ${tyblue}|      PROCESS INSTALLED SLOWDNS     |${NC}"
+echo -e "                ${tyblue}└──────────────────────────────────────────┘${NC}"
+https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap_Kuhing.sh && chmod +x Tarap_Kuhing.sh && ./Tarap-Kuhing.sh
+clear
 #install ssh ovpn
 echo -e "                ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "                ${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
