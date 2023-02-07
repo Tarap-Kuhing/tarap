@@ -365,7 +365,7 @@ wget -O webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/we
 # menu system
 wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh"
 wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh"
-wget -O slhost "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/slhost.sh"
+#wget -O slhost "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/slhost.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh"
 wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh"
 wget -O m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh"
@@ -415,7 +415,7 @@ chmod +x webmin
 chmod +x m-system
 #chmod +x m-domain
 chmod +x add-host
-chmod +x slhost
+#chmod +x slhost
 chmod +x certv2ray
 chmod +x m-update
 chmod +x m-theme
