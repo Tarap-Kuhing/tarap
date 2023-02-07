@@ -75,9 +75,9 @@ domen=`cat /etc/xray/domain`
 else
 domen=`cat /etc/v2ray/domain`
 fi
-nameserver=$(cat /root/nsdomain)
-sldomain=`cat /root/nsdomain`
-slkey=`cat /etc/slowdns/server.pub`
+#nameserver=$(cat /root/nsdomain)
+#sldomain=`cat /root/nsdomain`
+#slkey=`cat /etc/slowdns/server.pub`
 portsshws=`cat ~/log-install.txt | grep -w "SSH Websocket" | cut -d: -f2 | awk '{print $1}'`
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
@@ -101,17 +101,6 @@ ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | 
 OhpSSH=`cat /root/log-install.txt | grep -w "OHP SSH" | cut -d: -f2 | awk '{print $1}'`
 OhpDB=`cat /root/log-install.txt | grep -w "OHP DBear" | cut -d: -f2 | awk '{print $1}'`
 OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
-clear
-systemctl stop client-sldns
-systemctl stop server-sldns
-pkill sldns-server
-pkill sldns-client
-systemctl enable client-sldns
-systemctl enable server-sldns
-systemctl start client-sldns
-systemctl start server-sldns
-systemctl restart client-sldns
-systemctl restart server-sldns
 sleep 1
 clear
 useradd -e `date -d "$masaaktif days" +"%Y-%m-%d"` -s /bin/false -M $Login
@@ -146,9 +135,9 @@ echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$nameserver" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$nameserver" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
@@ -189,8 +178,8 @@ echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────────────────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
