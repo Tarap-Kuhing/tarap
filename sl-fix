@@ -9,12 +9,6 @@ rm restart
 rm -r sslh-fix-reboot
 rm -rf sslh-fix-reboot
 rm sslh-fix-reboot
-rm -r -m-update
-rm -rf m-update
-rm m-update
-rm -r menu
-rm -rf menu
-rm menu
 
 cd /usr/bin
 wget -O sslh-fix-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sslh-fix-reboot.sh"
@@ -25,8 +19,6 @@ wget -O menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/men
 cd /usr/bin
 chmod +x sslh-fix-reboot
 chmod +x restart
-chmod +x m-update
-chmod +x menu
 
 cd /root/
 # nano /etc/rc.local
