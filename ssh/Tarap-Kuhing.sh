@@ -1,9 +1,6 @@
 #!/bin/bash
 MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
-rm -rf /root/nsdomain
-rm -rf /var/lib/ipvps.conf
-rm nsdomain
 
 DOMAIN=kuhing.my.id
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
