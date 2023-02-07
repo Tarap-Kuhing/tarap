@@ -134,11 +134,11 @@ echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$nameserver" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}  ${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
@@ -177,10 +177,10 @@ echo -e "$COLOR1 $NC  ${WH}OVPN UDP   ${COLOR1}: ${WH}http://$IP:89/udp.ovpn" | 
 echo -e "$COLOR1 $NC  ${WH}OVPN SSL   ${COLOR1}: ${WH}http://$IP:89/ssl.ovpn" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 $NC  ${WH}UDPGW      ${COLOR1}: ${WH}7100-7900" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}HOST SLWDNS${COLOR1}: ${WH}$sldomain"  | tee -a /etc/log-create-user.log
 #echo -e "$COLOR1 $NC  ${WH}PUBKEY     ${COLOR1}: ${WH}$slkey" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
+#echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌──────────────────────────────────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}${WH}           Payload WSS                                       ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC}${WH}GET wss://bug.com HTTP/1.1[crlf]Host: ${domen}[crlf]Upgrade: websocket[crlf][crlf]${NC}" | tee -a /etc/log-create-user.log
