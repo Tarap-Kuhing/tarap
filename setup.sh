@@ -79,12 +79,13 @@ fi
 
 mkdir -p /etc/xray
 mkdir -p /etc/v2ray
-mkdir -p /root/nsdomain
+mkdir -p /etc/nsdomain
 touch /etc/xray/domain
 touch /etc/v2ray/domain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
-
+touch /etc/xray/nsdomain
+touch /etc/v2ray/nsdomain
 
 echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
