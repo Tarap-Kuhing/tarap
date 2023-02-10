@@ -89,7 +89,7 @@ echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
 sleep 0.5
 echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
 sleep 0.5
-echo -e "[ ${green}INFO${NC} ] Checking headers"
+echo -e "[ ${tyblue}INFO${NC} ] Checking headers"
 sleep 0.5
 totet=`uname -r`
 REQUIRED_PKG="linux-headers-$totet"
@@ -117,7 +117,7 @@ if [ "" = "$PKG_OK" ]; then
   echo -e "[ ${tyblue}NOTES${NC} ] enter now"
   read
 else
-  echo -e "[ ${green}INFO${NC} ] Oke installed"
+  echo -e "[ ${tyblue}INFO${NC} ] Oke installed"
 fi
 
 ttet=`uname -r`
@@ -138,12 +138,12 @@ ln -fs /usr/share/zoneinfo/Asia/Jakarta /etc/localtime
 sysctl -w net.ipv6.conf.all.disable_ipv6=1 >/dev/null 2>&1
 sysctl -w net.ipv6.conf.default.disable_ipv6=1 >/dev/null 2>&1
 
-echo -e "[ ${green}INFO${NC} ] Preparing the install file"
+echo -e "[ ${tyblue}INFO${NC} ] Preparing the install file"
 apt install git curl -y >/dev/null 2>&1
 apt install python -y >/dev/null 2>&1
-echo -e "[ ${green}INFO${NC} ] Selamat... File Instalasi Sudah Siap Brooo...."
+echo -e "[ ${tyblue}INFO${NC} ] Selamat... File Instalasi Sudah Siap Brooo...."
 sleep 1
-echo -ne "[ ${green}INFO${NC} ] Check permission : "
+echo -ne "[ ${tyblue}INFO${NC} ] Check permission : "
 
 PERMISSION
 if [ -f /home/needupdate ]; then
@@ -167,6 +167,17 @@ echo ""
 wget -q https://raw.githubusercontent.com/Tarap-Kuhing/sc/main/tools.sh;chmod +x tools.sh;./tools.sh
 rm tools.sh
 clear
+echo ""
+echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "               ${tyblue}         Please select a domain type below                 ${NC}"
+echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+echo -e "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
+echo -e "               ${tyblue}           [ 1 ]  Enter your Domain                        ${NC}"
+echo -e "               ${tyblue}           [ 2 ]  Use a random Domain                      ${NC}"
+echo -e "               ${tyblue}└──────────────────────────────────────────┘${NC}"
+read -p "   Please select numbers 1-2 or Any Button(Random) : " dns
+echo ""
+if [[ $dns == "1" ]]; then
 echo -e  "               ${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e  "               ${tyblue}|              TERIMA KASIH                |${NC}"
 echo -e  "               ${tyblue}|         SUDAH MENGGUNAKAN SCRIPT         |${NC}"
@@ -176,22 +187,24 @@ echo -e  "               ${tyblue}|         ADA PERTANYAAN CHAT SAJA         |${
 echo -e  "               ${tyblue}|        https://wa.me/085754292950        |${NC}"
 echo -e  "               ${tyblue}└──────────────────────────────────────────┘${NC}"
 echo " "
-sleep 3
-wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
-#read -rp "Masukan domain kamu Disini : " -e dns
-#    if [ -z $dns ]; then
-#        echo -e "
-#       Nothing input for domain!
-#        Then a random domain will be created"
-#    else
-#echo "$dns" > /root/scdomain
-#echo "$dns" > /etc/xray/scdomain
-#echo "$dns" > /etc/xray/domain
-#echo "$dns" > /etc/v2ray/domain
-#echo $dns > /root/domain
-#echo "IP=$dns" > /var/lib/ipvps.conf
-#    fi
+read -rp "Masukan domain kamu Disini : " -e dns
+echo "$dns" > /root/domain
+echo "$dns" > /root/scdomain
+echo "$dns" > /etc/xray/scdomain
+echo "$dns" > /etc/v2ray/scdomain
+echo "$dns" > /etc/xray/domain
+echo "$dns" > /etc/v2ray/domain
+echo "IP=$dns" > /var/lib/ipvps.conf
+echo ""
 clear
+elif [[ $dns == "2" ]]; then
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
+clear
+else
+echo -e "Random Subdomain/Domain is used"
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/Tarap-Kuhing.sh && chmod +x Tarap-Kuhing.sh && ./Tarap-Kuhing.sh
+clear
+fi
 #THEME RED
 cat <<EOF>> /etc/tarap/theme/red
 BG : \E[40;1;41m
