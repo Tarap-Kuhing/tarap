@@ -127,4 +127,5 @@ sleep 1
 rm -f /root/backup/backup.zip &> /dev/null
 echo 
 read -n 1 -s -r -p "Press any key to back on menu"
-system-menu
+menu
+esac
