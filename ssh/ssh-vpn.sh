@@ -375,10 +375,10 @@ wget -O auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/m
 wget -O restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh"
 wget -O bw "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bw.sh"
 wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tcp.sh"
-
-# change port
 wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh"
+
+
 #wget -O port-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-tr.sh"
 
 
