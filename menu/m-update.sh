@@ -88,6 +88,8 @@ rm -rf m-ip
 rm -rf m-dns
 rm -rf m-bot
 rm -rf update
+rm -rf backup
+rm -rf restore
 
 # download menu
 cd /usr/bin
@@ -144,6 +146,8 @@ rm -rf m-ip
 rm -rf m-dns
 rm -rf m-bot
 rm -rf update
+rm -rf backup
+rm -rf restore
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -200,6 +204,9 @@ wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main
 wget -O /usr/bin/m-dns "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-dns.sh" && chmod +x /usr/bin/m-dns
 wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh" && chmod +x /usr/bin/update
+wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
+
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -255,4 +262,6 @@ chmod +x m-ip
 chmod +x m-dns
 chmod +x m-bot
 chmod +x update
+chmod +x backup
+chmod +x backup
 cd
