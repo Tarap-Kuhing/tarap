@@ -128,4 +128,3 @@ rm -f /root/backup/backup.zip &> /dev/null
 echo 
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
-esac
