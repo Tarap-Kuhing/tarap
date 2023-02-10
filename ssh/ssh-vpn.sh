@@ -377,8 +377,8 @@ wget -O bw "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bw.sh
 wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tcp.sh"
 
 # change port
-#wget -O port-ssl "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-ssl.sh"
-#wget -O port-ovpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-ovpn.sh"
+wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh"
+wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh"
 #wget -O port-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-tr.sh"
 
 
@@ -426,8 +426,8 @@ chmod +x restart
 chmod +x bw
 chmod +x m-tcp
 
-#chmod +x port-ssl
-#chmod +x port-ovpn
+chmod +x backup
+chmod +x restore
 #chmod +x port-tr
 chmod +x xp
 #chmod +x asu
