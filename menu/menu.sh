@@ -217,7 +217,7 @@ echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${COLOR1     }Ssh/Ovpn${NC} ${COLOR1}Vmess  Vless  VlessXtls  Trojan-Ws  Trojan-Tls  ${NC}"    
+echo -e "$COLOR1 ${COLOR1}     Ssh/Ovpn${NC} ${COLOR1}Vmess  Vless  VlessXtls  Trojan-Ws  Trojan-Tls  ${NC}"    
 echo -e "$COLOR1 ${WH}Total${NC}   ${WH}$total_ssh        $vmess      $vless       $xtls          $trws          $trtls ${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
