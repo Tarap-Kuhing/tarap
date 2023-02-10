@@ -81,7 +81,7 @@ tls="$(cat ~/log-install.txt | grep -w "Trojan WS TLS" | cut -d: -f2|sed 's/ //g
 ntls="$(cat ~/log-install.txt | grep -w "Trojan WS none TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${user_EXISTS} == '0' ]]; do
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• ADD TROJAN ACCOUNT •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Trojan Account •                 ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 
 		read -rp "User: " -e user
@@ -90,7 +90,7 @@ echo -e "$COLOR1└────────────────────�
 		if [[ ${user_EXISTS} == '1' ]]; then
 clear
 		echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-                echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• ADD TROJAN ACCOUNT •                 ${NC} $COLOR1 $NC"
+                echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Trojan Account •                 ${NC} $COLOR1 $NC"
                 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
