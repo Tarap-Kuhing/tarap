@@ -4,9 +4,9 @@
 🚀 PERHATIAN........!!!!!!! 🚀
 <h2 align="center">
 <hr>
-🚀 SEBELUM INSTALL SCRIPT HARAP DAFTARKAN DULU IP VPS KAMU 🚀
+🚀 HARAP DAFTARKAN DULU IP VPS KAMU & MINTA LINK INSTALL SC 🚀
 <h2 align="center">
-🚀 KIRIM IP VPS KE SAYA LEWAT WA DI BAWAH INI  🚀
+🚀 CHAT KE SAYA LEWAT WA DI BAWAH INI  🚀
 
 https://api.whatsapp.com/send/?phone=6285754292950&text&type=phone_number&app_absent=0
 <h2><hr>
