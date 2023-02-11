@@ -38,6 +38,7 @@ wget -q -O /usr/bin/ceklim "https://raw.githubusercontent.com/Tarap-Kuhing/tarap
 wget -q -O /usr/bin/delete "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/delete.sh" && chmod +x /usr/bin/add-host
 wget -q -O /usr/bin/renew "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/renew.sh" && chmod +x /usr/bin/add-host
 wget -q -O /usr/bin/add-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vmess.sh" && chmod +x /usr/bin/add-vmess
+wget -q -O /usr/bin/list-user "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/list-user" && chmod +x /usr/bin/list-user
 wget -q -O /usr/bin/add-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-vless.sh" && chmod +x /usr/bin/add-vless
 wget -q -O /usr/bin/add-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-tr.sh" && chmod +x /usr/bin/add-tr
 wget -q -O /usr/bin/add-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/add-ssws.sh" && chmod +x /usr/bin/add-ssws
