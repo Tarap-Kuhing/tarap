@@ -90,6 +90,7 @@ rm -rf m-bot
 rm -rf update
 rm -rf backup
 rm -rf restore
+rm -rf list-user
 
 # download menu
 cd /usr/bin
@@ -148,6 +149,7 @@ rm -rf m-bot
 rm -rf update
 rm -rf backup
 rm -rf restore
+rm -rf list-user
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -206,6 +208,7 @@ wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/mai
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh" && chmod +x /usr/bin/update
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
+wget -O /usr/bin/list-user "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/list-user" && chmod +x /usr/bin/list-user
 
 chmod +x menu
 chmod +x m-vmess
@@ -264,4 +267,5 @@ chmod +x m-bot
 chmod +x update
 chmod +x backup
 chmod +x backup
+chmod +x list-user
 cd
