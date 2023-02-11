@@ -377,9 +377,7 @@ wget -O bw "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bw.sh
 wget -O m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/tcp.sh"
 wget -O backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh"
-
-
-#wget -O port-tr "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/port/port-tr.sh"
+wget -O list-user "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/list-user"
 
 
 wget -O xp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/xp.sh"
@@ -430,7 +428,7 @@ chmod +x backup
 chmod +x restore
 #chmod +x port-tr
 chmod +x xp
-#chmod +x asu
+chmod +x list-user
 cd
 
 
