@@ -80,7 +80,6 @@ cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
 cp /etc/gshadow backup/
-cp -r /etc/wireguard backup/wireguard
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/ backup
 cp -r /usr/local/xray backup/xray
@@ -103,5 +102,3 @@ rm -rf /root/backup
 rm -r /root/$IP-$date.zip
 echo "Done"
 echo "Please Check Your Email"
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
