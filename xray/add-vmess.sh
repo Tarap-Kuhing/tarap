@@ -102,11 +102,17 @@ clear
 v2ray-menu
 		fi
 	done
-read -p "   Bug SNI/Host : " sni
-if [[ $sni == "" ]]; then
-bug.com=$sni
+read -p "   Bug Host : " address
+read -p "   Bug SNI : " sni
+
+bug_addr=${address}.
+bug_addr2=$address
+if [[ $address == "" ]]; then
+bug.com=$bug_addr2
 else
-bug.com=$sni
+bug.com=$bug_addr
+fi
+
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -128,7 +134,7 @@ asu=`cat<<EOF
       "type": "none",
       "host": "$bug.com",
       "tls": "tls"
-      "sni": "$bug.com"
+      "sni": "$sni"
       "allowInsecure": "true"
 }
 EOF`
@@ -160,8 +166,23 @@ grpc=`cat<<EOF
       "type": "none",
       "host": "",
       "tls": "tls"
-      "sni": "$bug.com"
+      "sni": "$sni"
       "allowInsecure": "true"
+}
+EOF`
+isat=`cat<<EOF
+      {
+      "v": "2",
+      "ps": "${user}",
+      "add": "$bug.com",
+      "port": "80",
+      "id": "${uuid}",
+      "aid": "0",
+      "net": "ws",
+      "path": "/vmess",
+      "type": "none",
+      "host": "${domain}",
+      "tls": "none"
 }
 EOF`
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
@@ -170,6 +191,7 @@ vmess_base643=$( base64 -w 0 <<< $vmess_json3)
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
+vmesslink4="vmess://$(echo $isat | base64 -w 0)"
 systemctl restart xray > /dev/null 2>&1
 service cron restart > /dev/null 2>&1
 clear
@@ -199,6 +221,10 @@ echo -e "$COLOR1 ${NC} ${WH}${vmesslink2}${NC}"  | tee -a /etc/log-create-user.l
 echo -e "$COLOR1──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
+echo -e "$COLOR1──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS [ INDOSAT FREDOOM ]     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${WH}${vmesslink4}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}Expired On     ${COLOR1}: ${WH}$exp" | tee -a /etc/log-create-user.log
