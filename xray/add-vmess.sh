@@ -102,7 +102,11 @@ clear
 v2ray-menu
 		fi
 	done
-
+read -p "   Bug SNI/Host : " sni
+if [[ $sni == "" ]]; then
+bug.com=$sni
+else
+bug.com=$sni
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
@@ -122,8 +126,10 @@ asu=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "",
+      "host": "$bug.com",
       "tls": "tls"
+      "sni": "$bug.com"
+      "allowInsecure": "true"
 }
 EOF`
 ask=`cat<<EOF
@@ -137,7 +143,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "",
+      "host": "$bug.com",
       "tls": "none"
 }
 EOF`
@@ -154,6 +160,8 @@ grpc=`cat<<EOF
       "type": "none",
       "host": "",
       "tls": "tls"
+      "sni": "$bug.com"
+      "allowInsecure": "true"
 }
 EOF`
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
