@@ -111,7 +111,6 @@ read -p "   Bug SNI/Host : " sni
 #bug.com=$bug_addr2
 #else
 #bug.com=$bug_addr
-fi
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
