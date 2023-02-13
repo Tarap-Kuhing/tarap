@@ -133,7 +133,7 @@ asu=`cat<<EOF
       "type": "none",
       "host": "$sni",
       "tls": "tls"
-      "sni": "$sni"
+      "sni": "$sni",
 }
 EOF`
 ask=`cat<<EOF
@@ -164,7 +164,7 @@ grpc=`cat<<EOF
       "type": "none",
       "host": "",
       "tls": "tls"
-      "sni": "$sni"
+      "sni": "$sni",
 }
 EOF`
 isat=`cat<<EOF
