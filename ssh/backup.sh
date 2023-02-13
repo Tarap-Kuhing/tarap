@@ -65,7 +65,7 @@ fi
 
 IP=$(echo -e "\e[32mloading...\e[0m"
 clear
-IP=$(wget -qO- icanhazip.com);
+IP=$(wget -qO- icanhazip.com)
 date=$(date +"%Y-%m-%d")
 clear
 echo " Enter Your Email To Receive Message"
