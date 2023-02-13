@@ -36,9 +36,8 @@ cp /etc/shadow backup/
 cp /etc/gshadow backup/
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/ backup
-cp -r /etc /usr/local/xray backup/xray
-cp -r /usr/local/xray backup/xray
-cp -r /etc/trojan-go backup/trojan-go
+cp -r /etc /usr/local/xray
+cp -r /usr/local/xray
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp -r /home/vps/public_html backup/public_html
 cd /root
