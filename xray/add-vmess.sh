@@ -134,7 +134,7 @@ asu=`cat<<EOF
       "host": "$sni",
       "tls": "tls"
       "sni": "$sni"
-      "allowInsecure": "true"
+      "allowInsecure": "true",
 }
 EOF`
 ask=`cat<<EOF
@@ -166,7 +166,7 @@ grpc=`cat<<EOF
       "host": "",
       "tls": "tls"
       "sni": "$sni"
-      "allowInsecure": "true"
+      "allowInsecure": "true",
 }
 EOF`
 isat=`cat<<EOF
@@ -222,7 +222,7 @@ echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS [ INDOSAT FREDOOM ]     ${WH}: ${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS ${WH}[ INDOSAT EDUKASI APPS 30GB ] : ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink4}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
