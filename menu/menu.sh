@@ -144,13 +144,11 @@ else
     status_xray="${RED}OFF${NC}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/$user.json")
+vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/vmess.json")
 # TOTAL ACC CREATE  VLESS WS
 vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
-# TOTAL ACC CREATE  VLESS TCP XTLS
-xtls=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
 # TOTAL ACC CREATE  TROJAN
-trtls=$(grep -c -E "^#trx " "/usr/local/etc/xray/trojan.json")
+trtls=$(grep -c -E "^#trojan " "/usr/local/etc/xray/trojan.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
@@ -203,7 +201,7 @@ else
 echo -e "$COLOR1 $NC ${WH}System Uptime  ${COLOR1}: ${WH}$uphours $upminutes"
 fi
 echo -e "$COLOR1 $NC ${WH}Memory Usage   ${COLOR1}: ${WH}$uram / $tram"
-echo -e "$COLOR1 $NC ${WH}ISP & City     ${COLOR1}: ${WH}$ISP & $CITY"
+#echo -e "$COLOR1 $NC ${WH}ISP & City     ${COLOR1}: ${WH}$ISP & $CITY"
 echo -e "$COLOR1 $NC ${WH}Current Domain ${COLOR1}: ${WH}$(cat /etc/xray/domain)"
 echo -e "$COLOR1 $NC ${WH}IP-VPS         ${COLOR1}: ${WH}$IPVPS${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -217,8 +215,8 @@ echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v     $yesterday $yesterday_v      $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${COLOR1}     Ssh/Ovpn${NC} ${COLOR1}Vmess  Vless  VlessXtls  Trojan-Ws  Trojan-Tls  ${NC}"    
-echo -e "$COLOR1 ${WH}Total${NC}   ${WH}$total_ssh        $vmess      $vless       $xtls          $trws          $trtls ${NC}"
+echo -e "$COLOR1 ${COLOR1}     Ssh/Ovpn${NC} ${COLOR1}    Vmess       Vless    Trojan-Ws  ${NC}"    
+echo -e "$COLOR1 ${WH}Total${NC}   ${WH}$total_ssh        $vmess      $vless               $trws ${NC}"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1}${status_ws}${WH}]    ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}STATUS  ${WH}[${COLOR1}Menu${WH}]  $COLOR1 $NC"
