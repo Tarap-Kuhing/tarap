@@ -426,7 +426,7 @@ chmod +x m-tcp
 
 chmod +x backup
 chmod +x restore
-chmod +x rclone.conf
+chmod +x rclone
 chmod +x xp
 #chmod +x list-user
 cd
