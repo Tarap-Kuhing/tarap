@@ -102,15 +102,15 @@ clear
 v2ray-menu
 		fi
 	done
-read -p "   Bug Host : " address
-read -p "   Bug SNI : " sni
+#read -p "   Bug Host : " address
+read -p "   Bug SNI/Host : " sni
 
-bug_addr=${address}.
-bug_addr2=$address
-if [[ $address == "" ]]; then
-bug.com=$bug_addr2
-else
-bug.com=$bug_addr
+#bug_addr=${address}.
+#bug_addr2=$address
+#if [[ $address == "" ]]; then
+#bug.com=$bug_addr2
+#else
+#bug.com=$bug_addr
 fi
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
@@ -132,7 +132,7 @@ asu=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "$bug.com",
+      "host": "$sni",
       "tls": "tls"
       "sni": "$sni"
       "allowInsecure": "true"
@@ -149,7 +149,7 @@ ask=`cat<<EOF
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "$bug.com",
+      "host": "$sni",
       "tls": "none"
 }
 EOF`
@@ -174,7 +174,7 @@ isat=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "$bug.com",
+      "add": "$sni",
       "port": "80",
       "id": "${uuid}",
       "aid": "0",
