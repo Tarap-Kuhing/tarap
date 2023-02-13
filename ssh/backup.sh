@@ -16,6 +16,8 @@ clear
 IP=$(wget -qO- ipinfo.io/ip);
 date=$(date +"%Y-%m-%d")
 clear
+rm -rf /root/email
+mkdir /root/email
 email=$(cat /home/email)
 if [[ "$email" = "" ]]; then
 echo "Masukkan Email Untuk Menerima Backup"
@@ -34,8 +36,8 @@ cp /etc/shadow backup/
 cp /etc/gshadow backup/
 cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/ backup
+cp -r /etc /usr/local/xray backup/xray
 cp -r /usr/local/xray backup/xray
-cp -r /usr/local/etc/xray backup/xray
 cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp -r /home/vps/public_html backup/public_html
