@@ -81,7 +81,7 @@ tls="$(cat ~/log-install.txt | grep -w "Vless WS TLS" | cut -d: -f2|sed 's/ //g'
 none="$(cat ~/log-install.txt | grep -w "Vless WS none TLS" | cut -d: -f2|sed 's/ //g')"
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Vless Account •                 ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Vless Account •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 
 		read -rp "User: " -e user
@@ -90,7 +90,7 @@ echo -e "$COLOR1└────────────────────�
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
 		echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-		echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Vless Account •                 ${NC} $COLOR1 $NC"
+		echo -e "$COLOR1 ${NC} ${COLBG1}            ${WH}• Add Vless Account •              ${NC} $COLOR1 $NC"
 		echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 			echo ""
 			echo "A client with the specified name was already created, please choose another name."
@@ -99,6 +99,7 @@ clear
 			v2ray-menu
 		fi
 	done
+read -p "   Bug SNI/Host : " sni
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
@@ -109,11 +110,11 @@ sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 vlesslink1="vless://${uuid}@${domain}:$tls?path=/vless&security=tls&encryption=none&type=ws#${user}"
 vlesslink2="vless://${uuid}@${domain}:$none?path=/vless&encryption=none&type=ws#${user}"
-vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=bug.com#${user}"
+vlesslink3="vless://${uuid}@${domain}:$tls?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=$sni#${user}"
 systemctl restart xray
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CREATE VLESS USER •              ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLBG1}           ${WH}• CREATE VLESS USER •               ${NC} $COLOR1 $NC" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} "
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
