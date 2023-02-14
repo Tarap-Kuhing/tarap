@@ -47,23 +47,39 @@ PERMISSION () {
     fi
     BURIQ
 }
-red='\e[1;31m'
-green='\e[0;32m'
-NC='\e[0m'
-green() { echo -e "\\033[32;1m${*}\\033[0m"; }
-red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+###########- COLOR CODE -##############
+colornow=$(cat /etc/tarap/theme/color.conf)
+NC="\e[0m"
+RED="\033[0;31m"
+COLOR1="$(cat /etc/tarap/theme/$colornow | grep -w "TEXT" | cut -d: -f2|sed 's/ //g')"
+COLBG1="$(cat /etc/tarap/theme/$colornow | grep -w "BG" | cut -d: -f2|sed 's/ //g')"
+WH='\033[1;37m'
+###########- END COLOR CODE -##########
+MYIP=$(wget -qO- ipinfo.io/ip);
+echo "Checking VPS"
+CEKEXPIRED () {
+    today=$(date -d +1day +%Y-%m-%d)
+    Exp1=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
+    if [[ $today < $Exp1 ]]; then
+    echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
+    else
+    echo -e "\e[31mSCRIPT ANDA EXPIRED!\e[0m";
 
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-echo -ne
+    exit 0
+fi
+}
+IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+if [ $MYIP = $IZIN ]; then
+echo -e "\e[32mPermission Accepted...\e[0m"
+CEKEXPIRED
 else
-red "Permission Denied!"
+echo -e "\e[31mPermission Denied!\e[0m";
+
 exit 0
 fi
-
+clear
 cd
 MYIP=$(curl -sS ipv4.icanhazip.com)
 NameUser=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Tarap-Kuhing | grep $MYIP | awk '{print $2}')
