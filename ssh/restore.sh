@@ -32,32 +32,6 @@ echo -e "\e[31mPermission Denied!\e[0m";
 exit 0
 fi
 clear
-cd
-MYIP=$(curl -sS ipv4.icanhazip.com)
-NameUser=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Tarap-Kuhing | grep $MYIP | awk '{print $2}')
-
-cekdata=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
-
-[[ "$cekdata" = "404" ]] && {
-red "Data not found / you never backup"
-exit 0
-} || {
-green "Data found for username $NameUser"
-}
-
-echo -e "[ ${green}INFO${NC} ] • Restore Data..."
-read -rp "Password File: " -e InputPass
-echo -e "[ ${green}INFO${NC} ] • Downloading data.."
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/Tarap-Kuhing/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
-echo -e "[ ${green}INFO${NC} ] • Getting your data..."
-unzip -P $InputPass /root/backup/backup.zip &> /dev/null
-echo -e "[ ${green}INFO${NC} ] • Starting to restore data..."
-rm -f /root/backup/backup.zip &> /dev/null
-sleep 1
-cd /root/backup
-echo -e "[ ${green}INFO${NC} ] • Restoring passwd data..."
-sleep 1
-clear
 echo "This Feature Can Only Be Used According To Vps Data With This Autoscript"
 echo "Please input link to your vps data backup file."
 echo "You can check it on your email if you run backup data vps before."
