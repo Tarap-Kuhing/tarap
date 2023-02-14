@@ -17,22 +17,27 @@ echo -e "\e[32mloading...\e[0m"
 clear
 IP=$(wget -qO- icanhazip.com);
 date=$(date +"%Y-%m-%d")
-email=$(cat /home/email)
+clear
+echo " Enter Your Email To Receive Message"
+read -rp " Email: " -e email
+sleep 1
 echo Directory Created
 mkdir /root/backup
 sleep 1
 echo Start Backup
-clear
+ear
 cp /etc/passwd backup/
 cp /etc/group backup/
 cp /etc/shadow backup/
 cp /etc/gshadow backup/
-cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/ backup
 cp -r /usr/local/etc/xray
 cp -r /usr/local/etc/xray backup/xray
 cp -r /usr/local/etc/trojan
+cp -r /usr/local/etc/vless
+cp -r /usr/local/etc/vmess
 cp -r /usr/local/shadowsocksr
+cp -r /etc/crontab backup/crontab
 cp /etc/crontab backup/crontab
 cp -r /home/vps/public_html backup/public_html
 cd /root
