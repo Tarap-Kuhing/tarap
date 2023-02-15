@@ -88,9 +88,9 @@ EOF
 }
 function gantipengirim() {
 echo "Please enter your email"
-read -rp "Email : " -email
+read -rp "Email : " -e email
 echo "Please enter your Password email"
-read -rp "Password : " -pwdd
+read -rp "Password : " -e pwdd
 rm -rf /etc/smtp
 cat<<EOF>>/etc/smtp
 defaults
@@ -101,9 +101,9 @@ account default
 host smtp.gmail.com
 port 465
 auth on
-user $email
-from $email
-password $pwdd
+user merahjambo@gmail.com
+from merahjambo@gmail.com
+password yopxfqskgwhzrbji
 logfile ~/.smtp.log
 EOF
 }
