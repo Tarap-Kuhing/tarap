@@ -88,9 +88,9 @@ EOF
 }
 function gantipengirim() {
 echo "Please enter your email"
-read -rp "Email : " -e email
+read -rp "Email : " -email
 echo "Please enter your Password email"
-read -rp "Password : " -e pwdd
+read -rp "Password : " -pwdd
 rm -rf /etc/smtp
 cat<<EOF>>/etc/smtp
 defaults
@@ -104,7 +104,7 @@ auth on
 user $email
 from $email
 password $pwdd
-logfile ~/.msmtp.log
+logfile ~/.smtp.log
 EOF
 }
 function testemail() {
