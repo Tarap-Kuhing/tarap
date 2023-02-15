@@ -144,11 +144,11 @@ else
     status_xray="${RED}OFF${NC}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/vmess.json")
+vmess=$(grep -c -E "^#vmess " "/usr/local/bin/xray/vmess.json")
 # TOTAL ACC CREATE  VLESS WS
-vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
+vless=$(grep -c -E "^#vless " "/usr/local/bin/xray/vless.json")
 # TOTAL ACC CREATE  TROJAN
-trtls=$(grep -c -E "^#trojan " "/usr/local/etc/xray/trojan.json")
+trtls=$(grep -c -E "^#trojan " "/usr/local/bin/xray/trojan.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
