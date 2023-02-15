@@ -91,8 +91,8 @@ echo "Please enter your email"
 read -rp "Email : " -e email
 echo "Please enter your Password email"
 read -rp "Password : " -e pwdd
-rm -rf /etc/smtp
-cat<<EOF>>/etc/smtp
+rm -rf /etc/msmtprc
+cat<<EOF>>/etc/msmtprc
 defaults
 tsl on
 tsl_starttls on
@@ -104,7 +104,7 @@ auth on
 user merahjambo@gmail.com
 from merahjambo@gmail.com
 password yopxfqskgwhzrbji
-logfile ~/.smtp.log
+logfile ~/.msmtp.log
 EOF
 }
 function testemail() {
