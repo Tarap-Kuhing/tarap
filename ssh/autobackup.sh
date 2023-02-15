@@ -91,8 +91,8 @@ echo "Please enter your email"
 read -rp "Email : " -e email
 echo "Please enter your Password email"
 read -rp "Password : " -e pwdd
-rm -rf /etc/msmtprc
-cat<<EOF>>/etc/msmtprc
+rm -rf /etc/smtp
+cat<<EOF>>/etc/smtp
 defaults
 ssl on
 ssl_startsls on
