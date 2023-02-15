@@ -94,9 +94,9 @@ read -rp "Password : " -e pwdd
 rm -rf /etc/msmtprc
 cat<<EOF>>/etc/msmtprc
 defaults
-tls on
-tls_starttls on
-tls_trust_file /etc/ssl/certs/ca-certificates.crt
+ssl on
+ssl_startsls on
+ssl_trust_file /etc/ssl/certs/ca-certificates.crt
 account default
 host smtp.gmail.com
 port 465
