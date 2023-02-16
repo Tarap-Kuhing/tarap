@@ -101,9 +101,9 @@ account default
 host smtp-mail.outlook.com
 port 587
 auth on
-user buzinharfan@hotmail.com
-from buzinharfan@hotmail.com
-password lbfhomhghsidzzmc
+user $email
+from $email
+password $pwdd
 logfile ~/.msmtp.log
 EOF
 }
