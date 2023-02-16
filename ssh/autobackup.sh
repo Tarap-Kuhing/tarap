@@ -98,7 +98,7 @@ tsl on
 tsl_starttls on
 tsl_trust_file /etc/ssl/certs/ca-certificates.crt
 account default
-host smtp-mail.outlook.com
+host smtp.gmail.com
 port 587
 auth on
 user $email
