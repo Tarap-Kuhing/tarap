@@ -98,12 +98,12 @@ tsl on
 tsl_starttls on
 tsl_trust_file /etc/ssl/certs/ca-certificates.crt
 account default
-host smtp.gmail.com
-port 465
+host smtp-mail.outlook.com
+port 587
 auth on
-user merahjambo@gmail.com
-from merahjambo@gmail.com
-password yopxfqskgwhzrbji
+user buzinharfan@hotmail.com
+from buzinharfan@hotmail.com
+password lbfhomhghsidzzmc
 logfile ~/.msmtp.log
 EOF
 }
