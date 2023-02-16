@@ -26,7 +26,7 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e "\E[44;1;39m ⇱ [INFO] Downloading Update File⇲        \E[0m"
-sleep 3
+sleep 1
 echo -e "\033[0;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[m"
 echo -e "\E[44;1;39m              ⇱ UPDATE ⇲                      \E[0m"
 echo -e "\E[44;1;39m              ⇱ DIMULAI ⇲                     \E[0m"
@@ -91,6 +91,7 @@ rm -rf update
 rm -rf backup
 rm -rf restore
 rm -rf rclone
+rm -rf ws-dropbear
 
 # download menu
 cd /usr/bin
@@ -150,6 +151,7 @@ rm -rf update
 rm -rf backup
 rm -rf restore
 rm -rf rclone
+rm -rf ws-dropbear
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -209,7 +211,7 @@ wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/ma
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf" && chmod +x /usr/bin/rclone
-
+wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -268,4 +270,5 @@ chmod +x update
 chmod +x backup
 chmod +x backup
 chmod +x rclone
+chmod +x ws-dropbear
 cd
