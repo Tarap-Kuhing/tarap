@@ -46,15 +46,23 @@ rclone copy /root/$IP-$date.zip dr:backup/
 url=$(rclone link dr:backup/$IP-$date.zip)
 id=(`echo $url | grep '^https' | cut -d'=' -f2`)
 link="https://drive.google.com/u/4/uc?id=${id}&export=download"
-echo -e "The following is a link to your vps data backup file.
-
-Your VPS IP $IP
-
-$link
-
-If you want to restore data, please enter the link above.
-
-Thank You For Using Our Services" | mail -s "Backup Data" $email
+echo -e "
+Detail Backup
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+" | mail -s "Backup Data" $email
 rm -rf /root/backup
 rm -r /root/$IP-$date.zip
-echo Done
+clear
+echo -e "
+Detail Backup
+==================================
+IP VPS        : $IP
+Link Backup   : $link
+Tanggal       : $date
+==================================
+"
+echo "Silahkan cek Kotak Masuk $email"
