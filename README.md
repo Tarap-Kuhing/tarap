@@ -4,9 +4,9 @@
 🚀 PERHATIAN........!!!!!!! 🚀
 <h2 align="center">
 <hr>
-🚀 HARAP DAFTARKAN DULU IP VPS KAMU & MINTA LINK INSTALL SC 🚀
+🚀 SEBELUM INSTALL SCRIPT HARAP DAFTARKAN DULU IP VPS KAMU 🚀
 <h2 align="center">
-🚀 CHAT KE SAYA LEWAT WA DI BAWAH INI  🚀
+🚀 KIRIM IP VPS KE SAYA LEWAT WA DI BAWAH INI  🚀
 
 https://api.whatsapp.com/send/?phone=6285754292950&text&type=phone_number&app_absent=0
 <h2><hr>
@@ -55,6 +55,17 @@ https://api.whatsapp.com/send/?phone=6285754292950&text&type=phone_number&app_ab
   <h2 align="center">
 🚀 Update VPS Kamu Dulu Sebelum Instal Script 🚀<br>
 
+  ```html
+ apt-get update && apt-get upgrade -y && reboot
+   
+  ```
+<h2 align="center">
+🚀 Installation Script By TARAP KUHING 🚀<br>
+
+  ```html
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl && wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/setup.sh && chmod +x setup.sh && ./setup.sh
+ 
+  ```
 
 </b>
 <h2 align="center">
