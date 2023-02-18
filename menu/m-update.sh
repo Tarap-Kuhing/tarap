@@ -25,12 +25,11 @@ clear
 dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
-echo -e "\E[44;1;39m ⇱ [INFO] Downloading Update File⇲        \E[0m"
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ⇱ UPDATE ⇲                         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}              ⇱ DI MULAI ⇲                        ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 sleep 1
-echo -e "\033[0;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[m"
-echo -e "\E[44;1;39m              ⇱ UPDATE ⇲                      \E[0m"
-echo -e "\E[44;1;39m              ⇱ DIMULAI ⇲                     \E[0m"
-echo -e "\033[0;36m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[m"
 clear
 #hapus menu
 rm -rf menu
@@ -271,4 +270,9 @@ chmod +x backup
 chmod +x backup
 chmod +x rclone
 chmod +x ws-dropbear
+echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ⇱ UPDATE ⇲                         ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}             ⇱ SELESAI....⇲                       ${NC} $COLOR1 $NC"
+echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+sleep 1
 cd
