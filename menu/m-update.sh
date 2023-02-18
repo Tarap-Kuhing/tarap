@@ -26,8 +26,8 @@ dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Dat
 biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 ###########- COLOR CODE -##############
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ⇱ UPDATE ⇲                      ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}              ⇱ DI MULAI ⇲                     ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}                 ⇱ UPDATE ⇲${NC}                     $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}                ⇱ DI MULAI ⇲${NC}                    $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 sleep 1
 clear
@@ -271,8 +271,8 @@ chmod +x backup
 chmod +x rclone
 chmod +x ws-dropbear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}               ⇱ UPDATE ⇲                      ${NC} $COLOR1 $NC"
-echo -e "$COLOR1 ${NC} ${COLBG1}             ⇱ SELESAI....⇲                    ${NC} $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}                 ⇱ UPDATE ⇲${NC}                     $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}               ⇱ SELESAI....⇲${NC}                   $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 sleep 1
 cd
