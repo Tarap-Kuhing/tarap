@@ -217,7 +217,7 @@ wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/ma
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
 wget -O /usr/bin/ins-xray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh" && chmod +x /usr/bin/ins-xray
 wget -O /usr/bin/path "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/path.sh" && chmod +x /usr/bin/path
-wget -O /usr/bin/setup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/setup.sh && chmod +x /usr/bin/setup
+wget -O /usr/bin/setup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/setup.sh" && chmod +x /usr/bin/setup
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
