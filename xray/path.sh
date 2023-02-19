@@ -34,7 +34,7 @@ $domain:443
 EOF
 
 
-cat >/etc/xray/vmess <<-EOF
+cat >/etc/xray/config.json <<-EOF
 
 @ws_path {
 path /worryfree
