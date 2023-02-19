@@ -1,11 +1,6 @@
 cat >/etc/xray/path <<-EOF
 $domain:443
 {
-    tls merahjambo@gmail.com
-    encode gzip
-
-
-
     handle_path /vless {
         reverse_proxy localhost:14016
 
@@ -49,5 +44,4 @@ handle @ws_path {
     uri path_regexp /.* /
     reverse_proxy localhost:23456
 }
-
 EOF
