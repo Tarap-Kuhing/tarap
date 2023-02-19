@@ -95,7 +95,7 @@ clear
             echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
             echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
             echo ""
-            echo "A client with the specified name was already created, please choose another name."
+            echo -e " A client with the specified name was already created, please choose another name."
             echo ""
             echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
             read -n 1 -s -r -p "Press any key to back on menu"
@@ -165,21 +165,6 @@ grpc=`cat<<EOF
       "tls": "tls"
 }
 EOF`
-isat=`cat<<EOF
-      {
-      "v": "2",
-      "ps": "${user}",
-      "add": "$sni",
-      "port": "80",
-      "id": "${uuid}",
-      "aid": "0",
-      "net": "ws",
-      "path": "/vmess",
-      "type": "none",
-      "host": "${domain}",
-      "tls": "none"
-}
-EOF`
 tarap=`cat<<EOF
       {
       "v": "2",
@@ -198,6 +183,7 @@ EOF`
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmess_base642=$( base64 -w 0 <<< $vmess_json2)
 vmess_base643=$( base64 -w 0 <<< $vmess_json3)
+vmess_base644=$( base64 -w 0 <<< $vmess_json4)
 vmesslink1="vmess://$(echo $asu | base64 -w 0)"
 vmesslink2="vmess://$(echo $ask | base64 -w 0)"
 vmesslink3="vmess://$(echo $grpc | base64 -w 0)"
@@ -233,7 +219,7 @@ echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket GRPC     ${WH}: ${NC}" | tee -a /
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink3}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1──────────────────────────────────────────────────${NC}" | tee -a /etc/log-create-user.log
-echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS [ INDOSAT EDUKASI APPS 30GB ] ${WH}: ${NC}" | tee -a /etc/log-create-user.log
+echo -e "$COLOR1 ${NC} ${COLOR1}Link Websocket None TLS [ TAMBAHAN SAJA ] ${WH}: ${NC}" | tee -a /etc/log-create-user.log
 echo -e "$COLOR1 ${NC} ${WH}${vmesslink4}${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"  | tee -a /etc/log-create-user.log
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}" | tee -a /etc/log-create-user.log
