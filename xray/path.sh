@@ -1,5 +1,5 @@
-cat >/etc/xray/path <<-EOF
-$domain:443
+cat >/etc/xray/config.json <<-EOF
+$domain
 {
     handle_path /vless {
         reverse_proxy localhost:14016
