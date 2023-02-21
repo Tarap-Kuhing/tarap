@@ -91,8 +91,6 @@ rm -rf backup
 rm -rf restore
 rm -rf rclone
 rm -rf ws-dropbear
-#rm -rf ins-xray
-rm -rf path
 
 # download menu
 cd /usr/bin
@@ -153,8 +151,6 @@ rm -rf backup
 rm -rf restore
 rm -rf rclone
 rm -rf ws-dropbear
-#rm -rf ins-xray
-rm -rf path
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -215,9 +211,7 @@ wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/ma
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf" && chmod +x /usr/bin/rclone
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
-wget -O /usr/bin/ins-xray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/ins-xray.sh" && chmod +x /usr/bin/ins-xray
-wget -O /usr/bin/path "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/path.sh" && chmod +x /usr/bin/path
-wget -O /usr/bin/setup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/setup.sh" && chmod +x /usr/bin/setup
+
 chmod +x menu
 chmod +x m-vmess
 chmod +x m-vless
@@ -277,9 +271,7 @@ chmod +x backup
 chmod +x backup
 chmod +x rclone
 chmod +x ws-dropbear
-chmod +x ins-xray
-chmod +x path
-chmod +x setup
+clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}                 ${WH}⇱ UPDATE ⇲                    ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}⇱ SELESAI....⇲                  ${NC} $COLOR1 $NC"
