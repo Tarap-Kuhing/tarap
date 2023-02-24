@@ -15,7 +15,7 @@ rm /usr/bin/m-bot
 
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Downloading New Script"
-wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
+wget -q -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-bot
 
 sleep 2
 echo -e "$COLOR1│${NC}  $COLOR1[INFO]${NC} Download Changelog File"
