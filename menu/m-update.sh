@@ -47,7 +47,7 @@ rm -rf auto-reboot
 rm -rf clearcache
 rm -rf restart
 rm -rf m-update
-rm -rf backup
+rm -rf m-backup
 rm -rf autobackup
 rm -rf limitspeed
 rm -rf m-theme
@@ -87,9 +87,6 @@ rm -rf m-ip
 rm -rf m-dns
 rm -rf m-bot
 rm -rf update
-rm -rf backup
-rm -rf restore
-rm -rf rclone
 rm -rf ws-dropbear
 
 # download menu
@@ -108,7 +105,7 @@ rm -rf m-tcp
 rm -rf auto-reboot
 rm -rf clearcache
 rm -rf restart
-rm -rf backup
+rm -rf m-backup
 rm -rf autobackup
 rm -rf limitspeed
 rm -rf m-theme
@@ -147,9 +144,6 @@ rm -rf m-ip
 rm -rf m-dns
 rm -rf m-bot
 rm -rf update
-rm -rf backup
-rm -rf restore
-rm -rf rclone
 rm -rf ws-dropbear
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
@@ -167,8 +161,8 @@ wget -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tar
 wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/clearcache.sh" && chmod +x /usr/bin/clearcache
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
-wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
+wget -O /usr/bin/m-backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
+#wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
 wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
 wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
@@ -207,9 +201,9 @@ wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main
 wget -O /usr/bin/m-dns "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-dns.sh" && chmod +x /usr/bin/m-dns
 wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh" && chmod +x /usr/bin/update
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
-wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
-wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf" && chmod +x /usr/bin/rclone
+#wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/backup.sh" && chmod +x /usr/bin/backup
+#wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/restore.sh" && chmod +x /usr/bin/restore
+#wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/rclone.conf" && chmod +x /usr/bin/rclone
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
 
 chmod +x menu
@@ -227,8 +221,8 @@ chmod +x auto-reboot
 chmod +x clearcache
 chmod +x restart
 chmod +x m-update
-chmod +x backup
-chmod +x autobackup
+chmod +x m-backup
+#chmod +x autobackup
 chmod +x limitspeed
 chmod +x m-theme
 chmod +x add-host
@@ -267,9 +261,9 @@ chmod +x m-ip
 chmod +x m-dns
 chmod +x m-bot
 chmod +x update
-chmod +x backup
-chmod +x backup
-chmod +x rclone
+#chmod +x backup
+#chmod +x backup
+#chmod +x rclone
 chmod +x ws-dropbear
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
