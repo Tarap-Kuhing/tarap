@@ -57,6 +57,7 @@ PERMISSION () {
 }
 red='\e[1;31m'
 green='\e[1;32m'
+yellow='\033[0;33m'
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
@@ -97,11 +98,11 @@ cp -r /etc/shadow /root/backup/ &> /dev/null
 cp -r /etc/gshadow /root/backup/ &> /dev/null
 cp -r /etc/ppp/chap-secrets /root/backup/chap-secrets &> /dev/null
 cp -r /var/lib/ /root/backup &> /dev/null
-cp -r /usr/local/etc/xray &> /dev/null
-cp -r /usr/local/etc/xray backup/xray &> /dev/null
-cp -r /usr/local/etc/trojan &> /dev/null
-cp -r /usr/local/etc/vless &> /dev/null
-cp -r /usr/local/etc/vmess &> /dev/null
+#cp -r /usr/local/etc/xray &> /dev/null
+#cp -r /usr/local/etc/xray backup/xray &> /dev/null
+#cp -r /usr/local/etc/trojan &> /dev/null
+#cp -r /usr/local/etc/vless &> /dev/null
+#cp -r /usr/local/etc/vmess &> /dev/null
 cp -r /etc/xray /root/backup/xray &> /dev/null
 cp -r /etc/nginx/conf.d /root/backup/conf.d/ &> /dev/null
 cp -r /usr/local/shadowsocksr/ /root/backup/shadowsocksr &> /dev/null
@@ -114,7 +115,7 @@ zip -rP $InputPass $NameUser.zip backup > /dev/null 2>&1
 ##############++++++++++++++++++++++++#############
 LLatest=`date`
 Get_Data () {
-git clone https://github.com/Tarap-Kuhing/userbackup.git /root/user-backup/ &> /dev/null
+git clone https://github.com/jambanbkn/userbackup.git /root/user-backup/ &> /dev/null
 }
 
 Mkdir_Data () {
@@ -125,7 +126,8 @@ Input_Data_Append () {
 if [ ! -f "/root/user-backup/$NameUser/$NameUser-last-backup" ]; then
 touch /root/user-backup/$NameUser/$NameUser-last-backup
 fi
-echo -e "User         : $NameUser
+echo -e "User        : $NameUser
+Password    : $InputPass
 last-backup : $LLatest
 " >> /root/user-backup/$NameUser/$NameUser-last-backup
 mv /root/$NameUser.zip /root/user-backup/$NameUser/
@@ -133,15 +135,15 @@ mv /root/$NameUser.zip /root/user-backup/$NameUser/
 
 Save_And_Exit () {
     cd /root/user-backup
-    git config --global user.email "merahjambo@gmail.com" &> /dev/null
-    git config --global user.name "Tarap-Kuhing" &> /dev/null
+    git config --global user.email "jambanbkn@gmail.com" &> /dev/null
+    git config --global user.name "jambanbkn" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
     git add . &> /dev/null
     git commit -m $NameUser &> /dev/null
     git branch -M main &> /dev/null
-    git remote add origin https://github.com/Tarap-Kuhing/userbackup.git
-    git push -f https://github.com/Tarap-Kuhing/userbackup.git &> /dev/null
+    git remote add origin https://github.com/jambanbkn/userbackup.git
+    git push -f https://github.com/jambanbkn/userbackup.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
@@ -154,27 +156,35 @@ echo -e "[ ${green}INFO${NC} ] Getting info server... "
 Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
+echo -e ""
+echo -e "$yellow COPY Username&Password GITHUB DI BAWAH INI$NC"
+echo -e""
+echo -e "$yellow Username :👉  jambanbkn  👈$NC"
+echo -e""
+echo -e "$yellow PASTEKAN Username&Password GITHUB DI BAWAH INI$NC"
+echo -e ""
 Save_And_Exit
 fi
-link="https://raw.githubusercontent.com/Tarap-Kuhing/userbackup/main/$NameUser/$NameUser.zip"
+link="https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip"
 sleep 1
-echo -e "[ ${GREEN}INFO${NC} ] Backup done "
+echo -e "[ ${red}INFO${NC} ] Backup done "
 sleep 1
 echo
 sleep 1
-echo -e "[ ${GREEN}INFO${NC} ] Generete Link Backup "
+echo -e "[ ${red}INFO${NC} ] Generete Link Backup "
 echo
 sleep 2
 echo -e "The following is a link to your vps data backup file.
 
-Your VPS Backup Name    :👉👉[  $NameUser  ]
-save the NameUser pliss!!!
+"${yellow}Your VPS Backup Name    :👉👉👉  $NameUser  👈👈👈${NC}"
+"${red}save the NameUser pliss!!!${NC}"
 
-Your VPS Backup Password:👉👉[  $InputPass  ]
-save the Password pliss!!!
+"${yellow}Your VPS Backup Password:👉👉👉  $InputPass  👈👈👈${NC}"
+"${red}save the Password pliss!!!${NC}"
 
-Your VPS Backup Link    :👉👉[  $link  ]
-save the link pliss!!!!
+"${yellow}Your VPS Backup Link    :👉👉👉  $link  👈👈👈${NC}"
+
+"${red}save the link pliss!!!!${NC}"
 
 If you want to restore data, please enter the link above.
 Thank You For Using Our Services"
@@ -191,20 +201,20 @@ function restore(){
 cd
 read -rp "Enter Name File Your Backup  : " -e NameUser
 
-cekdata=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
+cekdata=$(curl -sS https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip | grep 404 | awk '{print $1}' | cut -d: -f1)
 
 [[ "$cekdata" = "404" ]] && {
 red "Data not found / you never backup"
 exit 0
 } || {
-echo -e "${GREEN} Data found for username $NameUser${NC}"
+echo -e "$yellow files available for restore $NameUser ${NC}"
 }
 
 echo -e "[ ${GREEN}INFO${NC} ] • Restore Data..."
 read -rp "Password File: " -e InputPass
 echo -e "[ ${GREEN}INFO${NC} ] • Downloading data.."
 mkdir -p /root/backup
-wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/Tarap-Kuhing/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
+wget -q -O /root/backup/backup.zip "https://raw.githubusercontent.com/jambanbkn/userbackup/main/$NameUser/$NameUser.zip" &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Getting your data..."
 unzip -P $InputPass /root/backup/backup.zip &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Starting to restore data..."
@@ -237,23 +247,24 @@ sleep 1
 cp -r /root/backup /var/lib/ &> /dev/null
 cp -r /root/backup/wireguard /etc/ &> /dev/null
 cp -r /root/backup/.acme.sh /root/ &> /dev/null
-cp -r /root/backup/vless /home/ &> /dev/null
-cp -r /root/backup/trojan /etc/ &> /dev/null
-cp -r /root/backup/vmess /etc/ &> /dev/null
+#cp -r /root/backup/vless /home/ &> /dev/null
+#cp -r /root/backup/trojan /etc/ &> /dev/null
+#cp -r /root/backup/vmess /etc/ &> /dev/null
 cp -r /root/backup/xray /etc/ &> /dev/null
-cp -r /root/backup/conf.d /etc/nginx/ &> /dev/null
+#cp -r /root/backup/conf.d /etc/nginx/ &> /dev/null
 cp -r /root/backup/shadowsocksr /usr/local/ &> /dev/null
 cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
+systemctl restart xray
 rm -fr /root/backup &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Done..."
 sleep 1
 rm -f /root/backup/backup.zip &> /dev/null
 cd
 echo
-read -n 1 -s -r -p "Press any key to back on menu"
-menu
+read -n 1 -s -r -p "Press any key to renew crtxray"
+crtxray
 }
 clear
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
