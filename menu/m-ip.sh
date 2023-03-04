@@ -190,7 +190,7 @@ cd /root/tarap/ &> /dev/null
 rm -rf .git &> /dev/null
 git init &> /dev/null
 touch ipvps &> /dev/null
-touch newuser &> /dev/null
+#touch newuser &> /dev/null
 TEXT="
 Name        : $client 
 Admin Panel : $isadmin
@@ -198,7 +198,7 @@ Exp         : $exp
 IPVPS       : $daftar 
 Reg Date    : $hariini
 " 
-echo "${TEXT}" >>/root/tarap/newuser 
+#echo "${TEXT}" >>/root/tarap/newuser 
 echo "### $client $exp $daftar $isadmin" >>/root/tarap/ipvps
 git add .
 git commit -m register &> /dev/null
