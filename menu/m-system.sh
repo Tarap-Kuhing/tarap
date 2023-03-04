@@ -47,7 +47,7 @@ echo -e "  ${WH}[${COLOR1}04${WH}]${NC} ${COLOR1}• ${WH}RESTART VPS   ${WH}   
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}CEK BANDWITH  ${WH}   ${WH}[${COLOR1}12${WH}]${NC} ${COLOR1}• ${WH}DNS ${WH}                $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
-echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH}                                $COLOR1 $NC"
+echo -e "  ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}INSTALL TCP BBR ${WH} ${WH}[${COLOR1}13${WH}]${NC} ${COLOR1}• ${WH}RENEW CERTV2RAY ${WH}    $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "  ${WH}[${COLOR1}07${WH}]${NC} ${COLOR1}• ${WH}IP  ${WH}                                            $COLOR1 $NC"
 echo -e "$COLOR1 ${NC}"
@@ -68,6 +68,7 @@ case $opt in
 10 |10) clear ; nano /etc/issue.net ;;
 11 |11) clear ; m-backup ; exit ;;
 12 |12) clear ; m-dns ; exit ;;
+13 |13) clear ; certv2ray ; exit ;;
 00 |0) clear ; menu ; exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
 esac
