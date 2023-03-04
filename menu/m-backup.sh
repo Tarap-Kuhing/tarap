@@ -157,11 +157,11 @@ Input_Data_Append
 sleep 1
 echo -e "[ ${green}INFO${NC} ] Processing updating server...... "
 echo -e ""
-echo -e "$yellow COPY Username&Password GITHUB DI BAWAH INI$NC"
+echo -e "$yellow COPY Username GITHUB DI BAWAH INI$NC"
 echo -e""
 echo -e "$yellow Username :👉  jambanbkn  👈$NC"
 echo -e""
-echo -e "$yellow PASTEKAN Username&Password GITHUB DI BAWAH INI$NC"
+echo -e "$yellow PASTEKAN Username GITHUB DI BAWAH INI$NC"
 echo -e ""
 Save_And_Exit
 fi
@@ -251,7 +251,7 @@ cp -r /root/backup/.acme.sh /root/ &> /dev/null
 #cp -r /root/backup/trojan /etc/ &> /dev/null
 #cp -r /root/backup/vmess /etc/ &> /dev/null
 cp -r /root/backup/xray /etc/ &> /dev/null
-#cp -r /root/backup/conf.d /etc/nginx/ &> /dev/null
+cp -r /root/backup/conf.d /etc/nginx/ &> /dev/null
 cp -r /root/backup/shadowsocksr /usr/local/ &> /dev/null
 cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
