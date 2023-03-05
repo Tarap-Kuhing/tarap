@@ -149,7 +149,7 @@ rm -rf m-bot
 rm -rf update
 rm -rf ws-dropbear
 rm -rf restore2
-rm -rf backup
+rm -rf backup2
 rm -rf rclone
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
@@ -207,7 +207,7 @@ wget -O /usr/bin/m-ip "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main
 wget -O /usr/bin/m-dns "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-dns.sh" && chmod +x /usr/bin/m-dns
 wget -O /usr/bin/m-bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-bot.sh" && chmod +x /usr/bin/m-bot
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh" && chmod +x /usr/bin/update
-wget -O /usr/bin/backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/backup.sh" && chmod +x /usr/bin/backup
+wget -O /usr/bin/backup2 "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/backup2.sh" && chmod +x /usr/bin/backup2
 #wget -O /usr/bin/restore "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/rclone "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/rclone.conf" && chmod +x /usr/bin/rclone
 wget -O /usr/bin/ws-dropbear "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ws-dropbear" && chmod +x /usr/bin/ws-dropbear
@@ -267,7 +267,7 @@ chmod +x m-ip
 chmod +x m-dns
 chmod +x m-bot
 chmod +x update
-chmod +x backup
+chmod +x backup2
 chmod +x restore2
 chmod +x rclone
 chmod +x ws-dropbear
