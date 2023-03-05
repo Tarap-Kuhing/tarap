@@ -286,7 +286,7 @@ case $opt in
 01 | 1) clear ; backup ;;
 02 | 2) clear ; restore ;;
 03 | 3) clear ; restore2 ;;
-#04 | 4) clear ; menu4 ;;
+04 | 4) clear ; backup2 ;;
 00 | 0) clear ; menu ;;
 *) clear ; menu-backup ;;
 x) exit ;;
