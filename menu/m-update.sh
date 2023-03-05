@@ -88,6 +88,7 @@ rm -rf m-dns
 rm -rf m-bot
 rm -rf update
 rm -rf ws-dropbear
+rm -rf restore2
 
 # download menu
 cd /usr/bin
@@ -145,6 +146,7 @@ rm -rf m-dns
 rm -rf m-bot
 rm -rf update
 rm -rf ws-dropbear
+rm -rf restore2
 
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/menu.sh" && chmod +x /usr/bin/menu
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
@@ -162,7 +164,7 @@ wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tara
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 wget -O /usr/bin/m-backup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-backup.sh" && chmod +x /usr/bin/m-backup
-#wget -O /usr/bin/autobackup "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/autobackup.sh" && chmod +x /usr/bin/autobackup
+wget -O /usr/bin/restore2 "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restore2.sh" && chmod +x /usr/bin/restore2
 wget -O /usr/bin/limitspeed "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/limitspeed.sh" && chmod +x /usr/bin/limitspeed
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
 wget -O /usr/bin/add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh" && chmod +x /usr/bin/add-host
@@ -262,7 +264,7 @@ chmod +x m-dns
 chmod +x m-bot
 chmod +x update
 #chmod +x backup
-#chmod +x backup
+chmod +x restore2
 #chmod +x rclone
 chmod +x ws-dropbear
 clear
