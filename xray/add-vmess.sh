@@ -125,14 +125,14 @@ asu=`cat<<EOF
       {
       "v": "2",
       "ps": "${user}",
-      "add": "${domain}",
+      "add": "${sni}",
       "port": "443",
       "id": "${uuid}",
       "aid": "0",
       "net": "ws",
       "path": "/vmess",
       "type": "none",
-      "host": "$sni",
+      "host": "${domain}",
       "tls": "tls"
 }
 EOF`
