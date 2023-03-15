@@ -91,7 +91,7 @@ echo -e "[ ${green}INFO${NC} ] Processing... "
 mkdir -p /root/backup
 sleep 1
 
-cp -r /root/.acme.sh /root/backup/ &> /dev/null
+#cp -r /root/.acme.sh /root/backup/ &> /dev/null
 cp -r /etc/passwd /root/backup/ &> /dev/null
 cp -r /etc/group /root/backup/ &> /dev/null
 cp -r /etc/shadow /root/backup/ &> /dev/null
@@ -235,15 +235,15 @@ sleep 1
 cp -r /root/backup/passwd1 /etc/ipsec.d/passwd &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Restoring ss.conf data..."
 sleep 1
-cp -r /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf &> /dev/null
+#cp -r /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Restoring admin data..."
 sleep 1
 cp -r /root/backup /var/lib/ &> /dev/null
-cp -r /root/backup/wireguard /etc/ &> /dev/null
-cp -r /root/backup/.acme.sh /root/ &> /dev/null
+#cp -r /root/backup/wireguard /etc/ &> /dev/null
+#cp -r /root/backup/.acme.sh /root/ &> /dev/null
 cp -r /root/backup/xray /etc/ &> /dev/null
 cp -r /root/backup/conf.d /etc/nginx/ &> /dev/null
-cp -r /root/backup/shadowsocksr /usr/local/ &> /dev/null
+#cp -r /root/backup/shadowsocksr /usr/local/ &> /dev/null
 cp -r /root/backup/public_html /home/vps/ &> /dev/null
 cp -r /root/backup/crontab /etc/ &> /dev/null
 cp -r /root/backup/cron.d /etc/ &> /dev/null
