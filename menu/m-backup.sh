@@ -232,12 +232,12 @@ sleep 1
 cp -r /root/backup/chap-secrets /etc/ppp/ &> /dev/null
 echo -e "[ ${GREEN}INFO${NC} ] • Restoring passwd1 data..."
 sleep 1
-cp -r /root/backup/passwd1 /etc/ipsec.d/passwd &> /dev/null
-echo -e "[ ${GREEN}INFO${NC} ] • Restoring ss.conf data..."
-sleep 1
+#cp -r /root/backup/passwd1 /etc/ipsec.d/passwd &> /dev/null
+#echo -e "[ ${GREEN}INFO${NC} ] • Restoring ss.conf data..."
+#sleep 1
 #cp -r /root/backup/ss.conf /etc/shadowsocks-libev/ss.conf &> /dev/null
-echo -e "[ ${GREEN}INFO${NC} ] • Restoring admin data..."
-sleep 1
+#echo -e "[ ${GREEN}INFO${NC} ] • Restoring admin data..."
+#sleep 1
 cp -r /root/backup /var/lib/ &> /dev/null
 #cp -r /root/backup/wireguard /etc/ &> /dev/null
 #cp -r /root/backup/.acme.sh /root/ &> /dev/null
