@@ -73,7 +73,7 @@ wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/m
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 wget -O /usr/bin/api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api" && chmod +x /usr/bin/api
 wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh" && chmod +x /usr/bin/bot
-wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh
+wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
 
 chmod +x ohp
 chmod +x menu
