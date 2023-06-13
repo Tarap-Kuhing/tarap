@@ -90,6 +90,8 @@ wget -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tar
 wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/clearcache.sh" && chmod +x /usr/bin/clearcache
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
+wget -O /usr/bin/api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api" && chmod +x /usr/bin/api
+wget -O /usr/bin/bot.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh" && chmod +x /usr/bin/bot
 
 chmod +x ohp
 chmod +x menu
@@ -107,4 +109,6 @@ chmod +x m-tcp
 chmod +x auto-reboot
 chmod +x clearcache
 chmod +x restart
+chmod +x api
+chmod +x bot
 cd
