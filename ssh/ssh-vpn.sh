@@ -385,7 +385,7 @@ wget -O webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/we
 wget -O m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh"
 wget -O m-domain "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-domain.sh"
 wget -O add-host "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/add-host.sh"
-wget -O bot.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh"
+wget -O bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh"
 wget -O certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh"
 wget -O m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh"
 wget -O speedtest "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/ssh/speedtest_cli.py"
@@ -401,7 +401,7 @@ wget -O cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray
 wget -O renew-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-ssws.sh"
 wget -O del-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-ssws.sh"
 wget -O trialssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialssws.sh"
-wget -O api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/api"
+wget -O api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api"
 #chmod +x sl-fix
 chmod +x menu
 chmod +x m-vmess
