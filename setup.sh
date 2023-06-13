@@ -326,6 +326,11 @@ wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/installsl
 clear
 }
 
+res9() {
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/Tarap-Kuhing/limit.sh && chmod +x limit.sh && ./limit.sh
+clear
+}
+
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|      PROCESS INSTALLED SSH & OPENVPN     |${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
@@ -347,7 +352,8 @@ clear
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|       PROCESS INSTALLED WEBSOCKET SSH|${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res4'
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+
 
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|         PROCESS INSTALLED BACKUP MENU |${NC}"
@@ -357,23 +363,26 @@ fun_bar 'res5'
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|           PROCESS INSTALLED OHP          |${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res6'
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/sshws/ohp.sh && chmod +x ohp.sh && ./ohp.sh
+
 
 
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|           DOWNLOAD EXTRA MENU            |${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res7'
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/update.sh && chmod +x update.sh && ./update.sh
+
 
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|           DOWNLOAD SLOWDNS                |${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res8'
+wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/installsl.sh && chmod +x installsl.sh && ./installsl.sh
+
 
 echo -e "${tyblue}┌──────────────────────────────────────────┐${NC}"
 echo -e "${tyblue}|           DOWNLOAD LIMIT XRAY              |${NC}"
 echo -e "${tyblue}└──────────────────────────────────────────┘${NC}"
-fun_bar 'res9'
+
 }
 
 function iinfo(){
