@@ -198,7 +198,7 @@ apt -y install squid3
 
 # install squid for debian 11
 apt -y install squid
-wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/ssh/main/squid.conf"
+wget -O /etc/squid/squid.conf "https://raw.githubusercontent.com/Tarap-Kuhing/tarap//main/ssh/squid.conf"
 sed -i $MYIP2 /etc/squid/squid.conf
 
 
