@@ -158,11 +158,11 @@ else
     sts="${Error}"
 fi
 # TOTAL ACC CREATE VMESS WS
-vmess=$(grep -c -E "^#vmess " "/usr/local/etc/xray/config.json")
+vmess=$(grep -c -E "^#vmg " "/etc/xray/config.json")
 # TOTAL ACC CREATE  VLESS WS
-vless=$(grep -c -E "^#vless " "/usr/local/etc/xray/vless.json")
+vless=$(grep -c -E "^#vlg " "/etc/xray/vless.json")
 # TOTAL ACC CREATE  TROJAN
-trtls=$(grep -c -E "^#trojan " "/usr/local/etc/xray/trojan.json")
+trtls=$(grep -c -E "^#tr " "/etc/xray/trojan.json")
 # TOTAL ACC CREATE OVPN SSH
 total_ssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 function updatews(){
