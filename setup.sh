@@ -220,8 +220,6 @@ fun_bar 'res1'
 clear
 fi
 }
-#install bot
-wget https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api && chmod +x api && ./api
 cat <<EOF>> /etc/kuhing/theme/red
 BG : \E[40;1;41m
 TEXT : \033[0;31m
