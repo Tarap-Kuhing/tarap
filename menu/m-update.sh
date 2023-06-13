@@ -49,6 +49,7 @@ rm -rf auto-reboot
 rm -rf clearcache
 rm -rf restart
 rm -rf ohp
+rm -rf certv2ray
 
 # download menu
 cd /usr/bin
@@ -71,7 +72,8 @@ wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tara
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
 wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 wget -O /usr/bin/api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api" && chmod +x /usr/bin/api
-wget -O /usr/bin/bot.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh" && chmod +x /usr/bin/bot
+wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh" && chmod +x /usr/bin/bot
+wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh
 
 chmod +x ohp
 chmod +x menu
@@ -92,4 +94,5 @@ chmod +x clearcache
 chmod +x restart
 chmod +x api
 chmod +x bot
+chmod +x certv2ray
 cd
