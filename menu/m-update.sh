@@ -38,6 +38,7 @@ rm -rf m-update
 rm -rf m-vless
 rm -rf m-trojan
 rm -rf m-system
+rm -rf m-theme
 rm -rf m-sshovpn
 rm -rf m-sshws
 rm -rf m-webmin
@@ -63,6 +64,7 @@ wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/m
 wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
 wget -O /usr/bin/m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
 wget -O /usr/bin/m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
+wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
 wget -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
 wget -O /usr/bin/m-sshws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-ssws.sh" && chmod +x /usr/bin/m-ssws
 wget -O /usr/bin/m-webmin "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-webmin.sh" && chmod +x /usr/bin/m-webmin
@@ -87,6 +89,7 @@ chmod +x m-update
 chmod +x m-vless
 chmod +x m-trojan
 chmod +x m-system
+chmod +x m-theme
 chmod +x m-sshovpn
 chmod +x m-ssws
 chmod +x m-webmin
