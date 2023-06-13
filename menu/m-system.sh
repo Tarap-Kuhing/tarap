@@ -3,7 +3,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
     today=$(date -d +1day +%Y-%m-%d)
-    Exp1=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | grep $MYIP | awk '{print $3}')
+    Exp1=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | grep $MYIP | awk '{print $3}')
     if [[ $today < $Exp1 ]]; then
     echo -e "\e[32mSTATUS SCRIPT AKTIF...\e[0m"
     else
@@ -12,7 +12,7 @@ CEKEXPIRED () {
     exit 0
 fi
 }
-IZIN=$(curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/Profile/permission/ip | awk '{print $4}' | grep $MYIP)
+IZIN=$(curl -sS https://raw.githubusercontent.com/kuhing/ip/main/vps | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 CEKEXPIRED
@@ -33,6 +33,7 @@ echo -e " [\e[36m•4\e[0m] Restart All Service"
 echo -e " [\e[36m•5\e[0m] Cek Bandwith"
 echo -e " [\e[36m•6\e[0m] Install TCP BBR"
 echo -e " [\e[36m•7\e[0m] Webmin Menu"
+echo -e " [\e[36m•8\e[0m] Bot Menu"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -50,6 +51,7 @@ case $opt in
 5) clear ; bw ; exit ;;
 6) clear ; m-tcp ; exit ;;
 7) clear ; webmin ; exit ;;
+8) clear ; bot ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
