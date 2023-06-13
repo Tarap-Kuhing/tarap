@@ -37,6 +37,7 @@ rm -rf m-vmess
 rm -rf m-update
 rm -rf m-vless
 rm -rf m-trojan
+rm -rf m-ssws
 rm -rf m-system
 rm -rf m-theme
 rm -rf m-sshovpn
@@ -63,6 +64,7 @@ wget -O /usr/bin/menu "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main
 wget -O /usr/bin/m-vmess "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vmess.sh" && chmod +x /usr/bin/m-vmess
 wget -O /usr/bin/m-vless "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-vless.sh" && chmod +x /usr/bin/m-vless
 wget -O /usr/bin/m-trojan "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-trojan.sh" && chmod +x /usr/bin/m-trojan
+wget -O /usr/bin/m-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-sswssh" && chmod +x /usr/bin/m-ssws
 wget -O /usr/bin/m-system "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-system.sh" && chmod +x /usr/bin/m-system
 wget -O /usr/bin/m-theme "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-theme.sh" && chmod +x /usr/bin/m-theme
 wget -O /usr/bin/m-sshovpn "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-sshovpn.sh" && chmod +x /usr/bin/m-sshovpn
@@ -88,6 +90,7 @@ chmod +x m-vmess
 chmod +x m-update
 chmod +x m-vless
 chmod +x m-trojan
+chmod +x m-ssws
 chmod +x m-system
 chmod +x m-theme
 chmod +x m-sshovpn
