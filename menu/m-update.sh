@@ -55,6 +55,7 @@ clear
 # hapus menu
 rm -rf menu
 rm -rf m-vmess
+rm -rf m-update
 rm -rf m-vless
 rm -rf m-trojan
 rm -rf m-system
@@ -89,13 +90,14 @@ wget -O /usr/bin/m-tcp "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/mai
 wget -O /usr/bin/auto-reboot "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/auto-reboot.sh" && chmod +x /usr/bin/auto-reboot
 wget -O /usr/bin/clearcache "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/clearcache.sh" && chmod +x /usr/bin/clearcache
 wget -O /usr/bin/restart "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/restart.sh" && chmod +x /usr/bin/restart
-wget -O /usr/bin/update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
+wget -O /usr/bin/m-update "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/m-update.sh" && chmod +x /usr/bin/m-update
 wget -O /usr/bin/api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api" && chmod +x /usr/bin/api
 wget -O /usr/bin/bot.sh "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot.sh" && chmod +x /usr/bin/bot
 
 chmod +x ohp
 chmod +x menu
 chmod +x m-vmess
+chmod +x m-update
 chmod +x m-vless
 chmod +x m-trojan
 chmod +x m-system
