@@ -534,6 +534,7 @@ echo "" | tee -a /etc/log-create-user.log
 read -n 1 -s -r -p "Press any key to back on m-ssws"
 m-ssws
 }
+
 function renew-ssws(){
 TIMES="10"
 CHATID=$(cat /etc/per/id)
@@ -605,6 +606,7 @@ curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$T
     read -n 1 -s -r -p "Press any key to back on m-ssws"
     m-ssws
 }
+
 function del-ssws(){
 clear
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/config.json")
@@ -720,8 +722,8 @@ echo -e "$COLOR1└────────────────────�
 echo "$COLOR1 ${NC} "
 read -n 1 -s -r -p "   Press any key to back on m-ssws"
 m-ssws
-
 }
+
 function list-vmess(){
 clear
 tls="$(cat ~/log-install.txt | grep -w "Shadowsocks WS TLS" | cut -d: -f2|sed 's/ //g')"
@@ -848,7 +850,6 @@ read -n 1 -s -r -p "Press any key to back on m-ssws"
 m-ssws
 }
 clear
-
 author=$(cat /etc/profil)
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}              ${WH}• SSWS PANEL MENU •              ${NC} $COLOR1 $NC"
