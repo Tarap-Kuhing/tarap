@@ -230,6 +230,9 @@ echo -e "$COLOR1 ${WH}Download${NC}   ${WH}$today_tx $today_txv     $yesterday_t
 echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx $yesterday_rxv     $month_rx $month_rxv   ${NC}"
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v    $yesterday $yesterday_v     $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
+echo -e "$COLOR1   Ssh/Ovpn  Vmess  Vless  VlessXtls  Trojan-Ws  Trojan-Tls ${NC}"
+echo -e "$COLOR1 ${COLOR1}$total_ssh${NC}    ${COLOR1}    $vmess      $vless       $xtls          $trws          $trtls ${NC}"
+
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1}${status_ws}${WH}]    ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}STATUS  ${WH}[${COLOR1}Menu${WH}]   $COLOR1 $NC"
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
