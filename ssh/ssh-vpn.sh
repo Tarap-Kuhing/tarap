@@ -401,7 +401,7 @@ wget -O cek-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray
 wget -O renew-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/renew-ssws.sh"
 wget -O del-ssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/del-ssws.sh"
 wget -O trialssws "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/trialssws.sh"
-
+wget -O api "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/api"
 #chmod +x sl-fix
 chmod +x menu
 chmod +x m-vmess
@@ -446,7 +446,7 @@ chmod +x renew-ssws
 chmod +x del-ssws
 chmod +x trialssws
 chmod +x xp
-#chmod +x asu
+chmod +x api
 cd
 
 
