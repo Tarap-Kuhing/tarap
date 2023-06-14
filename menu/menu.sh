@@ -192,6 +192,7 @@ read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 }
 clear
+status=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status )
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• MENU PANEL VPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}                  ${WH}• PREMIUM •                  ${NC} $COLOR1 $NC"
@@ -231,7 +232,7 @@ echo -e "$COLOR1 ${WH}Upload${NC}     ${WH}$today_rx $today_rxv    $yesterday_rx
 echo -e "$COLOR1 ${COLOR1}Total${NC}    ${COLOR1}  $todayd $today_v    $yesterday $yesterday_v     $month $month_v  ${NC} "
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1   Ssh/Ovpn  Vmess  Vless  VlessXtls  Trojan-Ws  Trojan-Tls ${NC}"
-echo -e "$COLOR1 ${COLOR1}$total_ssh${NC}    ${COLOR1}    $vmess      $vless       $xtls          $trws          $trtls ${NC}"
+echo -e "$COLOR1       ${COLOR1}$total_ssh${NC}    ${COLOR1}    $vmess      $vless       $xtls          $trws          $trtls ${NC}"
 
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "  ${WH}[${COLOR1}01${WH}]${NC} ${COLOR1}• ${WH}SSHWS   ${WH}[${COLOR1}${status_ws}${WH}]    ${WH}[${COLOR1}06${WH}]${NC} ${COLOR1}• ${WH}STATUS  ${WH}[${COLOR1}Menu${WH}]   $COLOR1 $NC"
@@ -246,7 +247,7 @@ echo -e "  ${WH}[${COLOR1}05${WH}]${NC} ${COLOR1}• ${WH}TROJAN  ${WH}[${COLOR1
 echo -e " $COLOR1 $NC                                              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
-echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• Terima Kasih Sudah Mengguanakan Script Saya •${NC}  $COLOR1 $NC"
+echo -e "$COLOR1 ${NC} ${COLBG1}${WH}• $status •${NC}  $COLOR1 $NC"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 if [ "$Isadmin" = "ON" ]; then
