@@ -192,7 +192,7 @@ read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 }
 clear
-status=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/Status )
+status=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status )
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• MENU PANEL VPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}                  ${WH}• PREMIUM •                  ${NC} $COLOR1 $NC"
