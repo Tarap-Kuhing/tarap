@@ -55,6 +55,8 @@ rm -rf certv2ray
 rm -rf installer
 rm -rf bot1
 rm -rf bot
+rm -rf status
+rm -rf versi
 
 # download menu
 cd /usr/bin
@@ -84,7 +86,7 @@ wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap
 wget -O /usr/bin/installer "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/installer.sh" && chmod +x /usr/bin/installer
 wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/bot.sh" && chmod +x /usr/bin/bot
 
-wget -O /usr/bin/status "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/Status" && chmod +x /usr/bin/status
+wget -O /usr/bin/status "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status" && chmod +x /usr/bin/status
 wget -O /usr/bin/versi "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi" && chmod +x /usr/bin/versi
 
 
