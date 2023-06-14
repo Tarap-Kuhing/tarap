@@ -84,6 +84,10 @@ wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap
 wget -O /usr/bin/installer "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/installer.sh" && chmod +x /usr/bin/installer
 wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/bot.sh" && chmod +x /usr/bin/bot
 
+wget -O /usr/bin/status "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status" && chmod +x /usr/bin/status
+wget -O /usr/bin/versi "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi" && chmod +x /usr/bin/versi
+
+
 chmod +x ohp
 chmod +x menu
 chmod +x m-vmess
@@ -108,4 +112,6 @@ chmod +x bot1
 chmod +x certv2ray
 chmod +x installer
 chmod +x bot
+chmod +x status
+chmod +x versi
 cd
