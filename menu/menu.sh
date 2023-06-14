@@ -180,7 +180,7 @@ sleep 2
 sleep 5
 rm /root/install_up.sh
 rm /opt/.ver
-version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/versi )
+version_up=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi )
 echo "$version_up" > /opt/.ver
 echo -e "$COLOR1 ${NC}  $COLOR1[INFO]${NC} Successfully Up To Date!"
 echo -e "$COLOR1└─────────────────────────────────────────────────┘${NC}"
@@ -192,7 +192,7 @@ read -n 1 -s -r -p "  Press any key to back on menu"
 menu
 }
 clear
-status=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status )
+status=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/Status )
 echo -e "$COLOR1┌─────────────────────────────────────────────────┐${NC}"
 echo -e "$COLOR1 ${NC} ${COLBG1}               ${WH}• MENU PANEL VPS •              ${NC} $COLOR1 $NC"
 echo -e "$COLOR1 ${NC} ${COLBG1}                  ${WH}• PREMIUM •                  ${NC} $COLOR1 $NC"
