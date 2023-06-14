@@ -57,6 +57,7 @@ rm -rf bot1
 rm -rf bot
 rm -rf status
 rm -rf versi
+rm -rf installsl
 
 # download menu
 cd /usr/bin
@@ -85,7 +86,7 @@ wget -O /usr/bin/bot1 "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main
 wget -O /usr/bin/certv2ray "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/xray/certv2ray.sh" && chmod +x /usr/bin/certv2ray
 wget -O /usr/bin/installer "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/installer.sh" && chmod +x /usr/bin/installer
 wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/main/bot.sh" && chmod +x /usr/bin/bot
-
+wget -O /usr/bin/installsl "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/installsl.sh" && chmod +x /usr/bin/installsl
 wget -O /usr/bin/status "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status" && chmod +x /usr/bin/status
 wget -O /usr/bin/versi "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi" && chmod +x /usr/bin/versi
 
@@ -114,6 +115,7 @@ chmod +x bot1
 chmod +x certv2ray
 chmod +x installer
 chmod +x bot
+chmod +x installsl
 chmod +x status
 chmod +x versi
 cd
