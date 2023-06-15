@@ -53,7 +53,7 @@ case $opt in
 6) clear ; m-tcp ; exit ;;
 7) clear ; webmin ; exit ;;
 8) clear ; bot1 ; exit ;;
-9) clear ; bot ; exit ;;
+9) clear ; bot3 ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
