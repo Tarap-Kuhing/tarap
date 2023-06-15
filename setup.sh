@@ -184,6 +184,8 @@ mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 mkdir -p /etc/nsdomain
 mkdir -p /etc/per
+mkdir -p /etc/slowdns
+touch /etc/xray/dns
 touch /etc/per/id
 touch /etc/per/token
 touch /etc/xray/domain
