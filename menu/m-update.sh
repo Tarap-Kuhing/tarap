@@ -58,6 +58,7 @@ rm -rf bot
 rm -rf status
 rm -rf versi
 rm -rf installsl
+rm -rf bot3
 
 # download menu
 cd /usr/bin
@@ -89,7 +90,7 @@ wget -O /usr/bin/bot "https://raw.githubusercontent.com/Tarap-Kuhing/Profile/mai
 wget -O /usr/bin/installsl "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/slowdns/installsl.sh" && chmod +x /usr/bin/installsl
 wget -O /usr/bin/status "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/status" && chmod +x /usr/bin/status
 wget -O /usr/bin/versi "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/versi" && chmod +x /usr/bin/versi
-
+wget -O /usr/bin/bot3 "https://raw.githubusercontent.com/Tarap-Kuhing/tarap/main/menu/bot3" && chmod +x /usr/bin/bot3
 
 chmod +x ohp
 chmod +x menu
@@ -118,4 +119,5 @@ chmod +x bot
 chmod +x installsl
 chmod +x status
 chmod +x versi
+chmod +x bot3
 cd
